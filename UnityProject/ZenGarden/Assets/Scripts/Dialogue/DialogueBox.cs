@@ -12,8 +12,10 @@ public class DialogueBox : MonoBehaviour
     public Button NextButton; 
 
     public StoryDialogue DefaultDialogue;
-    public StoryDialogue NextDialogue;
 
+    List<INextClickHandler> NextClickListeners = new List<INextClickHandler>();
+    List<IOptionClickHandler> OptionClickListeners = new List<IOptionClickHandler>();
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +23,42 @@ public class DialogueBox : MonoBehaviour
     }
 
     public void ClickNextEvent() {
-        SetDialogue(NextDialogue);
+        Debug.Log("First Stage");
+        foreach (INextClickHandler handler in NextClickListeners)
+        {
+            handler.HandleNextClick();
+        }
+    }
+    
+    public void ClickOptionEvent(StoryOption option) {
+        foreach (IOptionClickHandler handler in OptionClickListeners)
+        {
+            handler.HandleOptionClick(option);
+        }
+    }
+
+    public void RegisterForNextClickEvents(INextClickHandler self)
+    {
+        NextClickListeners.Add(self);
+    }
+    
+    public void RegisterForOptionClickEvents(IOptionClickHandler self)
+    {
+        OptionClickListeners.Add(self);
     }
 
     public void SetDialogue(StoryDialogue dialogue) {
         NameText.text = dialogue.Speaker.Name;
         DialogueText.text = dialogue.Dialogue;
     }
+}
+
+public interface INextClickHandler
+{
+    void HandleNextClick();
+}
+    
+public interface IOptionClickHandler
+{
+    void HandleOptionClick(StoryOption option);
 }

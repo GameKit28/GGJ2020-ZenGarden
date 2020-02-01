@@ -7,8 +7,6 @@ namespace Story.Model {
     public class StoryScene : ScriptableObject, ITransitionDestination 
     {
         public StorySetting Setting;
-        public StoryDialogue StartingDialogue;
-
-
+        public StoryDialogueSequence StartingDialogue;
     }
 }
