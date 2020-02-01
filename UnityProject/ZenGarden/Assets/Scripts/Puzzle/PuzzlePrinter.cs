@@ -8,7 +8,7 @@ public class PuzzlePrinter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Print();   
+        Print();
     }
 
     // Update is called once per frame
