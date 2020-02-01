@@ -1,10 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Story.Model {
-    [CreateAssetMenu()]
-    public class StoryCharacter : ScriptableObject {
+namespace Story.Model
+{
+    [CreateAssetMenu(fileName = "New Character", menuName = GameMenuName + "Story Character")]
+    public class StoryCharacter : StoryAsset 
+    {
         public string Name;
+
+        public Sprite sprite;
+        public Sprite talkingSprite;
     }
 }

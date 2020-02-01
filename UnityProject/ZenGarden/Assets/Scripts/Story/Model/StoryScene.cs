@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Story.Model {
-    [CreateAssetMenu()]
-    public class StoryScene : ScriptableObject, ITransitionDestination 
+    [CreateAssetMenu(fileName = "New Scene", menuName = GameMenuName + "Story Scene")]
+    public class StoryScene : StoryAsset, ITransitionDestination 
     {
         public StorySetting Setting;
         public StoryDialogue StartingDialogue;
