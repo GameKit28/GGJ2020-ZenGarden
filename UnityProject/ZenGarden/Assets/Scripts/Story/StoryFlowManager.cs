@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using Story.Model;
+using Dialogue;
 
 namespace Story {
     public class StoryFlowManager : MonoBehaviour, IOptionClickHandler, INextClickHandler {
@@ -10,6 +11,7 @@ namespace Story {
         private uint currentDialogueSequenceIndex;
 
         public DialogueBox DialogueBox;
+        public Background Background;
 
         public StoryScene StartingScene;
 
@@ -25,6 +27,26 @@ namespace Story {
                     currentDialogueSequenceIndex++;
                     DialogueBox.SetDialogue(currentDialogueSequence.Dialogues[(int)currentDialogueSequenceIndex]);
                 }
+                else
+                {
+                    //We've Reached the End of Our Sequence
+                    if (currentDialogueSequence.Buttons.Count == 0)
+                    {
+                        //Let's just repeat the sequence. No where to go.
+                    }
+                    else if (currentDialogueSequence.Buttons.Count > 0)
+                    {
+                        //Let's just assume they clicked the first button for now
+                        ITransitionDestination target = currentDialogueSequence.Buttons[0].GetTarget();
+                        if (target is StoryScene)
+                        {
+                            StartNewScene((StoryScene)target);
+                        } else if (target is StoryDialogueSequence)
+                        {
+                            StartNewSequence((StoryDialogueSequence)target);
+                        }
+                    }
+                }
             }
         }
 
@@ -32,14 +54,24 @@ namespace Story {
             if(DialogueBox) {
                 DialogueBox.RegisterForOptionClickEvents(this);
                 DialogueBox.RegisterForNextClickEvents(this);
+            }
+            
+            StartNewScene(StartingScene);
+        }
 
-                if (StartingScene)
+        private void StartNewScene(StoryScene scene)
+        {
+            if (scene)
+            {
+                StartNewSequence(scene.StartingDialogue);
+
+                if (Background)
                 {
-                    StartNewSequence(StartingScene.StartingDialogue);
+                    Background.SetBackground(scene.Setting);
                 }
             }
         }
-
+        
         private void StartNewSequence(StoryDialogueSequence sequence)
         {
             currentDialogueSequence = sequence;

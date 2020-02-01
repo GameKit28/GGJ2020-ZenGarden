@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a89edf5626fc1194b846ba23aed15354, type: 3}
+  m_Name: TestDialogue_03
+  m_EditorClassIdentifier: 
+  Dialogues:
+  - Speaker: {fileID: 11400000, guid: d1289627be71eb84f802df3a41930b3e, type: 2}
+    Dialogue: Testing.. Testing..
+  - Speaker: {fileID: 11400000, guid: 715d2af1bcdddab45ae215a3818231bb, type: 2}
+    Dialogue: One
+  - Speaker: {fileID: 11400000, guid: d1289627be71eb84f802df3a41930b3e, type: 2}
+    Dialogue: Two
+  - Speaker: {fileID: 11400000, guid: 715d2af1bcdddab45ae215a3818231bb, type: 2}
+    Dialogue: Three
+  Buttons:
+  - ButtonText: Baby Don't Hurt Me
+    Target: {fileID: 11400000, guid: a71414bd38ad60c44bb58ad10a5ce49d, type: 2}

@@ -5,59 +5,63 @@ using UnityEngine.UI;
 
 using Story.Model;
 
-public class DialogueBox : MonoBehaviour
+namespace Dialogue
 {
-    public Text NameText;
-    public Text DialogueText;
-    public Button NextButton; 
-
-    public StoryDialogue DefaultDialogue;
-
-    List<INextClickHandler> NextClickListeners = new List<INextClickHandler>();
-    List<IOptionClickHandler> OptionClickListeners = new List<IOptionClickHandler>();
-    
-    // Start is called before the first frame update
-    void Awake()
+    public class DialogueBox : MonoBehaviour
     {
-        SetDialogue(DefaultDialogue);
-    }
+        public Text NameText;
+        public Text DialogueText;
+        public Button NextButton; 
 
-    public void ClickNextEvent() {
-        foreach (INextClickHandler handler in NextClickListeners)
+        public StoryDialogue DefaultDialogue;
+
+        List<INextClickHandler> NextClickListeners = new List<INextClickHandler>();
+        List<IOptionClickHandler> OptionClickListeners = new List<IOptionClickHandler>();
+    
+        // Start is called before the first frame update
+        void Awake()
         {
-            handler.HandleNextClick();
+            SetDialogue(DefaultDialogue);
+        }
+
+        public void ClickNextEvent() {
+            foreach (INextClickHandler handler in NextClickListeners)
+            {
+                handler.HandleNextClick();
+            }
+        }
+    
+        public void ClickOptionEvent(StoryOption option) {
+            foreach (IOptionClickHandler handler in OptionClickListeners)
+            {
+                handler.HandleOptionClick(option);
+            }
+        }
+
+        public void RegisterForNextClickEvents(INextClickHandler self)
+        {
+            NextClickListeners.Add(self);
+        }
+    
+        public void RegisterForOptionClickEvents(IOptionClickHandler self)
+        {
+            OptionClickListeners.Add(self);
+        }
+
+        public void SetDialogue(StoryDialogue dialogue) {
+            NameText.text = dialogue.Speaker.Name;
+            DialogueText.text = dialogue.Dialogue;
         }
     }
-    
-    public void ClickOptionEvent(StoryOption option) {
-        foreach (IOptionClickHandler handler in OptionClickListeners)
-        {
-            handler.HandleOptionClick(option);
-        }
-    }
 
-    public void RegisterForNextClickEvents(INextClickHandler self)
+    public interface INextClickHandler
     {
-        NextClickListeners.Add(self);
+        void HandleNextClick();
     }
     
-    public void RegisterForOptionClickEvents(IOptionClickHandler self)
+    public interface IOptionClickHandler
     {
-        OptionClickListeners.Add(self);
-    }
-
-    public void SetDialogue(StoryDialogue dialogue) {
-        NameText.text = dialogue.Speaker.Name;
-        DialogueText.text = dialogue.Dialogue;
+        void HandleOptionClick(StoryOption option);
     }
 }
 
-public interface INextClickHandler
-{
-    void HandleNextClick();
-}
-    
-public interface IOptionClickHandler
-{
-    void HandleOptionClick(StoryOption option);
-}
