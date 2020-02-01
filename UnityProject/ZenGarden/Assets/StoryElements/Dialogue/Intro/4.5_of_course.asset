@@ -10,17 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a89edf5626fc1194b846ba23aed15354, type: 3}
-  m_Name: Intro_01
+  m_Name: 4.5_of_course
   m_EditorClassIdentifier: 
   Dialogues:
-  - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
-    Dialogue: 1
   - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
-    Dialogue: 2
-  - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
-    Dialogue: 3
-  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
-    Dialogue: 4
+    Dialogue: ' Of course. I just... don''t do it anymore.'
   Buttons:
   - ButtonText: Next
-    Target: {fileID: 11400000, guid: fc61889ec40e0344f9833a71802aa687, type: 2}
+    Target: {fileID: 11400000, guid: e5bd05a5b67b98342a9c73c46e090dab, type: 2}
