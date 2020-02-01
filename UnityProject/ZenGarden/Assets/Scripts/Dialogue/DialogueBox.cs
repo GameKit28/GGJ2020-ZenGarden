@@ -17,13 +17,12 @@ public class DialogueBox : MonoBehaviour
     List<IOptionClickHandler> OptionClickListeners = new List<IOptionClickHandler>();
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         SetDialogue(DefaultDialogue);
     }
 
     public void ClickNextEvent() {
-        Debug.Log("First Stage");
         foreach (INextClickHandler handler in NextClickListeners)
         {
             handler.HandleNextClick();
