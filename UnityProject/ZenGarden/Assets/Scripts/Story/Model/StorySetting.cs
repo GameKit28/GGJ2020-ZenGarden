@@ -7,7 +7,7 @@ namespace Story.Model {
     [CreateAssetMenu()]
     public class StorySetting : ScriptableObject 
     {
-        public Image BackgroundImage;
+        public Sprite BackgroundImage;
         //public Music
     }
 }

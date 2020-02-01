@@ -12,7 +12,7 @@ namespace Story.Model {
 
         public ITransitionDestination GetTarget()
         {
-            if(Target.GetType().IsSubclassOf(typeof(ITransitionDestination)))
+            if(Target is ITransitionDestination)
             {
                 return (ITransitionDestination)Target;
             }

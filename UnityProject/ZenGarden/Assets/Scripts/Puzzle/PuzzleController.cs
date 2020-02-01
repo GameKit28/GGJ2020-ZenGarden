@@ -3,15 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using static PuzzlePiece.PuzzlePieceType;
 
 public class PuzzleController : MonoBehaviour
 {
-    static Dictionary<string, bool> isPlantable = new Dictionary<string, bool>()
+    static Dictionary<string, PuzzlePiece> puzzlePieceMap = new Dictionary<string, PuzzlePiece>()
     {
-        { "dirt", true }
+        { "dirt", new PuzzlePiece() { Type = PuzzlePiece.PuzzlePieceType.GROUND , IsPlantable = true}},
+        { "weeds", new PuzzlePiece() { Type = PuzzlePiece.PuzzlePieceType.WEED }},
+        { "rock", new PuzzlePiece() { Type = PuzzlePiece.PuzzlePieceType.ROCK }}
     };
 
-    public TileBase daisy;
+    public Tool tool;
     private Tilemap tiles;
 
     // Start is called before the first frame update
@@ -23,12 +26,21 @@ public class PuzzleController : MonoBehaviour
 
     private void OnTileClicked(Vector3Int position, TileBase tile)
     {
-        bool tryGetValue;
-        if (isPlantable.TryGetValue(tile.name, out tryGetValue))
+        if (tool == null)
         {
-            tiles.SetTile(position, daisy);
+            return;
+        }
+        PuzzlePiece tryGetValue;
+        if (puzzlePieceMap.TryGetValue(tile.name, out tryGetValue))
+        {
+            if(tryGetValue.IsPlantable)
+            {
+              tiles.SetTile(position, tool.tile);
+            }
         }
     }
+
+
 
     // Update is called once per frame
     void Update()

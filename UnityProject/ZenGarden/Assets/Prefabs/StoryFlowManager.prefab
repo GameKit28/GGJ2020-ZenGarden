@@ -44,4 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueBox: {fileID: 0}
-  StartingScene: {fileID: 11400000, guid: 48bbae33b4e9d4749bd4e6e73a95fa9e, type: 2}
+  Background: {fileID: 0}
+  StartingScene: {fileID: 11400000, guid: a71414bd38ad60c44bb58ad10a5ce49d, type: 2}
