@@ -3,26 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+using Story.Model;
+
 public class DialogueBox : MonoBehaviour
 {
     public Text NameText;
     public Text DialogueText;
     public Button NextButton; 
 
+    public StoryDialogue DefaultDialogue;
+    public StoryDialogue NextDialogue;
+
     // Start is called before the first frame update
     void Start()
     {
-        SetDialogue("TestName", "TestDialogue");
+        SetDialogue(DefaultDialogue);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void ClickNextEvent() {
+        SetDialogue(NextDialogue);
     }
 
-    public void SetDialogue(string name, string dialogue) {
-        NameText.text = name;
-        DialogueText.text = dialogue;
+    public void SetDialogue(StoryDialogue dialogue) {
+        NameText.text = dialogue.Speaker.Name;
+        DialogueText.text = dialogue.Dialogue;
     }
 }
