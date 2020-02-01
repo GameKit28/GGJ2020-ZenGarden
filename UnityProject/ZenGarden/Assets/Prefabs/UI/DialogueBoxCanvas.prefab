@@ -739,8 +739,9 @@ MonoBehaviour:
   NameText: {fileID: 2295453939584592976}
   DialogueText: {fileID: 2295453938890801168}
   NextButton: {fileID: 2295453939421758786}
-  DefaultDialogue: {fileID: 11400000, guid: 9904699ea56b25843b0fefde26772307, type: 2}
-  NextDialogue: {fileID: 11400000, guid: 386537da28f38e3468cc262c62f94eaf, type: 2}
+  DefaultDialogue:
+    Speaker: {fileID: 11400000, guid: 4a73b312437d1d14b8010a6401915809, type: 2}
+    Dialogue: Something went wrong..
 --- !u!114 &2295453940103483548
 MonoBehaviour:
   m_ObjectHideFlags: 0
