@@ -25,8 +25,8 @@ MonoBehaviour:
     Dialogue: You still love gardening, don't you?
   Buttons:
   - ButtonText: I mean, yeah...
-    Target: {fileID: 0}
+    Target: {fileID: 11400000, guid: e5bd05a5b67b98342a9c73c46e090dab, type: 2}
   - ButtonText: Of course
-    Target: {fileID: 0}
+    Target: {fileID: 11400000, guid: e5bd05a5b67b98342a9c73c46e090dab, type: 2}
   - ButtonText: I don't know
     Target: {fileID: 0}

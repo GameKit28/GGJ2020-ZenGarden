@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 using Story.Model;
 using Dialogue;
+using JetBrains.Annotations;
 
 namespace Story {
     public class StoryFlowManager : MonoBehaviour, IOptionClickHandler, INextClickHandler {
@@ -59,26 +61,25 @@ namespace Story {
             StartNewScene(StartingScene);
         }
 
-        private void StartNewScene(StoryScene scene)
+        private void StartNewScene([NotNull] StoryScene scene)
         {
-            if (scene)
-            {
-                StartNewSequence(scene.StartingDialogue);
+            Debug.Log("Starting Scene: " + scene);
+            StartNewSequence(scene.StartingDialogue);
 
-                if (Background)
-                {
-                    Background.SetBackground(scene.Setting);
-                }
+            if (Background)
+            {
+                Background.SetBackground(scene.Setting);
             }
         }
         
-        private void StartNewSequence(StoryDialogueSequence sequence)
+        private void StartNewSequence([NotNull] StoryDialogueSequence sequence)
         {
+            Debug.Log("Starting Sequence: " + sequence);
             currentDialogueSequence = sequence;
             currentDialogueSequenceIndex = 0;
             if (DialogueBox)
             {
-                DialogueBox.SetDialogue(currentDialogueSequence.Dialogues[(int)currentDialogueSequenceIndex]);
+                DialogueBox.SetDialogue(currentDialogueSequence.Dialogues[(int) currentDialogueSequenceIndex]);
             }
         }
     }

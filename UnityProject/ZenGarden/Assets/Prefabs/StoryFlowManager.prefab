@@ -43,6 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3433a0c85ec165141bea32e162780ba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBox: {fileID: 0}
-  Background: {fileID: 0}
+  DialogueBox: {fileID: 2295453940103483549, guid: 2aa9396d100909e4c87f395084823aea,
+    type: 3}
+  Background: {fileID: 9131377108946559840, guid: 82ff972fb19527541975ca86075cf964,
+    type: 3}
   StartingScene: {fileID: 11400000, guid: a71414bd38ad60c44bb58ad10a5ce49d, type: 2}

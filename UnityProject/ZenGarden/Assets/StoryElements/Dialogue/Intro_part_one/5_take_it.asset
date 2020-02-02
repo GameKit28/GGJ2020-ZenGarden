@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 5_take_it
   m_EditorClassIdentifier: 
   Dialogues:
-  - Speaker: {fileID: 0}
+  - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
     Dialogue: Then take the daisy. Take the first step.
   Buttons: []
