@@ -8,6 +8,6 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        GameManager.Instance.LoadNewUnityScene("LevelSelect");
+        GameManager.Instance.LoadNewUnityScene("Story");
     }
 }
