@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - PuzzleController
+  - EndLevelSplash
+  - LevelButton
   layers:
   - Default
   - TransparentFX

@@ -1,3 +1,4 @@
+using Dialogue;
 using UnityEngine;
 using Utilities;
 
@@ -6,7 +7,9 @@ namespace Story.Model {
     public class StoryCharacter : StoryAsset {
         public string Name;
 
-        public Sprite sprite;
-        public Sprite talkingSprite;
+        public CharacterSpriteSet HappySprites;
+        public CharacterSpriteSet NeutralSprites;
+        public CharacterSpriteSet UpsetSprites;
+        public CharacterSpriteSet StonedSprites;
     }
 }

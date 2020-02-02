@@ -15,12 +15,16 @@ MonoBehaviour:
   Dialogues:
   - Speaker: {fileID: 11400000, guid: d1289627be71eb84f802df3a41930b3e, type: 2}
     Dialogue: Red
+    Emotion: 0
   - Speaker: {fileID: 11400000, guid: d1289627be71eb84f802df3a41930b3e, type: 2}
     Dialogue: Orange
+    Emotion: 0
   - Speaker: {fileID: 11400000, guid: 715d2af1bcdddab45ae215a3818231bb, type: 2}
     Dialogue: Yellow
+    Emotion: 0
   - Speaker: {fileID: 11400000, guid: 715d2af1bcdddab45ae215a3818231bb, type: 2}
     Dialogue: Green
+    Emotion: 0
   Buttons:
   - ButtonText: What is Love?
     Target: {fileID: 11400000, guid: 5c43eb25daa04f141bd2fc3d4550ba4b, type: 2}

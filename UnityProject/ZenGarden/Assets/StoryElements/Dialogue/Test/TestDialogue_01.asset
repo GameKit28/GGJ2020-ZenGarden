@@ -14,13 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dialogues:
   - Speaker: {fileID: 11400000, guid: d1289627be71eb84f802df3a41930b3e, type: 2}
-    Dialogue: Testing.. Testing..
+    Dialogue: Test Neutral One
+    Emotion: 0
   - Speaker: {fileID: 11400000, guid: 715d2af1bcdddab45ae215a3818231bb, type: 2}
-    Dialogue: One
+    Dialogue: Test Neutral Two
+    Emotion: 0
   - Speaker: {fileID: 11400000, guid: d1289627be71eb84f802df3a41930b3e, type: 2}
-    Dialogue: Two
+    Dialogue: Test Happy One
+    Emotion: 1
   - Speaker: {fileID: 11400000, guid: 715d2af1bcdddab45ae215a3818231bb, type: 2}
-    Dialogue: Three
+    Dialogue: Test Happy Two
+    Emotion: 1
+  - Speaker: {fileID: 11400000, guid: d1289627be71eb84f802df3a41930b3e, type: 2}
+    Dialogue: Test Upset One
+    Emotion: 2
+  - Speaker: {fileID: 11400000, guid: 715d2af1bcdddab45ae215a3818231bb, type: 2}
+    Dialogue: Test Upset Two
+    Emotion: 2
+  - Speaker: {fileID: 11400000, guid: d1289627be71eb84f802df3a41930b3e, type: 2}
+    Dialogue: Test Stoned One
+    Emotion: 3
+  - Speaker: {fileID: 11400000, guid: 715d2af1bcdddab45ae215a3818231bb, type: 2}
+    Dialogue: Test Stoned Two
+    Emotion: 3
   Buttons:
   - ButtonText: Option 1 Next
     Target: {fileID: 11400000, guid: bce35c5296c1fd54a94680a04ddd5cc7, type: 2}

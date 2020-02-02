@@ -14,15 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dialogues:
   - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
-    Dialogue: I used to love gardening.
+    Dialogue: I used to love gardening. It's hard to say I only used to love gardening.
+    Emotion: 0
   - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
-    Dialogue: I want to do it again, but I don't know where to start.
+    Dialogue: I've been avoiding my mom's gardens since she died.
+    Emotion: 0
   - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
-    Dialogue: It all feels like too much these days.
+    Dialogue: I mean, look at this. It's overgrown. Everything we planted has rotted.
+    Emotion: 0
+  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
+    Dialogue: I want to start gardening again, but I don't know where to start. It
+      all feels like too much. I put it off too long and I can't clean this all up
+      alone. Without her.
+    Emotion: 0
   - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
-    Dialogue: You know what they say, though.
+    Dialogue: You know what they say, though?
+    Emotion: 1
   - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
     Dialogue: '"The journey of 1,000 miles begins with a single step."'
+    Emotion: 1
   Buttons:
   - ButtonText: What if I trip?
     Target: {fileID: 11400000, guid: a5c2735d85adcc44585e762dabb8e76f, type: 2}
