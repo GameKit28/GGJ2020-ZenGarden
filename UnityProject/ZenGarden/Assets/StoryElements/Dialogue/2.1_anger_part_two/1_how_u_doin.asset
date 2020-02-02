@@ -12,5 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a89edf5626fc1194b846ba23aed15354, type: 3}
   m_Name: 1_how_u_doin
   m_EditorClassIdentifier: 
-  Dialogues: []
-  Buttons: []
+  Dialogues:
+  - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
+    Dialogue: Hey Jamie! How's the gardening going?
+    Emotion: 1
+  Buttons:
+  - ButtonText: Good
+    Target: {fileID: 11400000, guid: 4d5b5da8e8a0e0246b9dd1c92b74d878, type: 2}
+  - ButtonText: Okay
+    Target: {fileID: 11400000, guid: c93186f2069589745ae11ff748fb33aa, type: 2}
+  - ButtonText: Bad
+    Target: {fileID: 11400000, guid: 37cf406369008814b86d3e8eccfde337, type: 2}
+  - ButtonText: I don't know
+    Target: {fileID: 11400000, guid: 46c50bc93190d9447a5acfa8552e3b8f, type: 2}
