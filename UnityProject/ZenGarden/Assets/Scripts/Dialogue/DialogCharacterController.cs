@@ -32,19 +32,61 @@ public class DialogCharacterController : MonoBehaviour
     private StagePosition LeftStagePos = StagePosition.OffStage;
     private StagePosition RightStagePos = StagePosition.OffStage;
 
+    private StoryCharacter LeftCharacterCache;
+    private StoryCharacter RightCharacterChache;
+
+    public void SetCharacterEmotion(StoryCharacter character, Emotion emotion)
+    {
+        Sprite newNormal = null;
+        Sprite newTalking = null;
+        switch (emotion)
+        {
+            case Emotion.Happy:
+                newNormal = character.HappySprites.Normal;
+                newTalking = character.HappySprites.Talking;
+                break;
+            case Emotion.Neutral:
+                newNormal = character.NeutralSprites.Normal;
+                newTalking = character.NeutralSprites.Talking;
+                break;
+            case Emotion.Upset:
+                newNormal = character.UpsetSprites.Normal;
+                newTalking = character.UpsetSprites.Talking;
+                break;
+            case Emotion.Stoned:
+                newNormal = character.StonedSprites.Normal;
+                newTalking = character.StonedSprites.Talking;
+                break;
+        }
+
+        if (character == LeftCharacterCache)
+        {
+            this.leftCharacter.sprite = newNormal;
+            this.leftCharacterTalking.sprite = newTalking;
+        }
+        
+        if (character == RightCharacterChache)
+        {
+            this.rightCharacter.sprite = newNormal;
+            this.rightCharacterTalking.sprite = newTalking;
+        }
+    }
+
     public void SetCharacters(StoryCharacter leftCharacter, StoryCharacter rightCharacter)
     {
         if (leftCharacter)
         {
-            this.leftCharacter.sprite = leftCharacter.sprite;
-            this.rightCharacter.sprite = rightCharacter.sprite;
+            this.leftCharacter.sprite = leftCharacter.NeutralSprites.Normal;
+            this.leftCharacterTalking.sprite = leftCharacter.NeutralSprites.Talking;
+            LeftCharacterCache = leftCharacter;
             LeftStagePos = StagePosition.OffStage;
         }
 
         if (rightCharacter)
         {
-            this.leftCharacterTalking.sprite = leftCharacter.talkingSprite;
-            this.rightCharacterTalking.sprite = rightCharacter.talkingSprite;
+            this.rightCharacter.sprite = rightCharacter.NeutralSprites.Normal;
+            this.rightCharacterTalking.sprite = rightCharacter.NeutralSprites.Talking;
+            RightCharacterChache = rightCharacter;
             RightStagePos = StagePosition.OffStage;
         }
     }

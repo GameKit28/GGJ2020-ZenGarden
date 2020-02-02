@@ -13,5 +13,15 @@ MonoBehaviour:
   m_Name: TestCharacter_01
   m_EditorClassIdentifier: 
   Name: Bert
-  sprite: {fileID: 21300000, guid: 2f0e3bf079c71a34f92af078fcef0bfe, type: 3}
-  talkingSprite: {fileID: 21300000, guid: 2f4ecd91e74d93a4499729f023d5ff32, type: 3}
+  HappySprites:
+    Normal: {fileID: 21300000, guid: e00481b3cc63fb0428617cfbf7552f53, type: 3}
+    Talking: {fileID: 21300000, guid: a6657f18a5da1964fa49e3ba74031f91, type: 3}
+  NeutralSprites:
+    Normal: {fileID: 21300000, guid: e00481b3cc63fb0428617cfbf7552f53, type: 3}
+    Talking: {fileID: 21300000, guid: 8a43d6a742975104085bd57eaa8711a4, type: 3}
+  UpsetSprites:
+    Normal: {fileID: 21300000, guid: 2f0e3bf079c71a34f92af078fcef0bfe, type: 3}
+    Talking: {fileID: 21300000, guid: 2f4ecd91e74d93a4499729f023d5ff32, type: 3}
+  StonedSprites:
+    Normal: {fileID: 21300000, guid: e66d5bbd316692542b59f41b8f1e5baa, type: 3}
+    Talking: {fileID: 21300000, guid: e66d5bbd316692542b59f41b8f1e5baa, type: 3}
