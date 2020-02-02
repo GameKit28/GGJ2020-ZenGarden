@@ -7,8 +7,9 @@ public class MouseController : MonoBehaviour
 {
     private Tilemap tiles;
 
-    public delegate void OnTileClicked(Vector3Int position, TileBase tile);
-    public OnTileClicked onTileClicked;
+    public delegate void OnMouseEvent(Vector3Int position, TileBase tile);
+    public OnMouseEvent onTileClicked;
+    public OnMouseEvent onTileOver;
 
     // Start is called before the first frame update
     void Start()
@@ -21,25 +22,33 @@ public class MouseController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Debug.Log(string.Format("Co-ords of mouse is [X: {0} Y: {0}]", pos.x, pos.y));
-            Vector3Int position = GetClickedPosition();
-            TileBase tile = tiles.GetTile(position);
-
-            if (tile != null)
-            {
-                Debug.Log(string.Format("Tile is: {0}", tile.name));
-                if(onTileClicked != null)
-                {
-                    onTileClicked(position, tile);
-                }
-            }
-            else
-            {
-                Debug.Log("No tile");
-            }
+            DeliverMouseEvent(onTileClicked);
         }
+    }
 
+    void OnMouseOver()
+    {
+        DeliverMouseEvent(onTileOver);
+    }
+
+    void DeliverMouseEvent(OnMouseEvent listener)
+    {
+        Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Debug.Log(string.Format("Co-ords of mouse is [X: {0} Y: {0}]", pos.x, pos.y));
+        Vector3Int position = GetClickedPosition();
+        TileBase tile = tiles.GetTile(position);
+
+        if (tile != null)
+        {
+            Debug.Log(string.Format("Tile is: {0}", tile.name));
+            if (listener != null)
+            {
+                listener(position, tile);
+            }
+        } else
+        {
+            Debug.Log("No tile");
+        }
     }
 
     Vector3Int GetClickedPosition()
