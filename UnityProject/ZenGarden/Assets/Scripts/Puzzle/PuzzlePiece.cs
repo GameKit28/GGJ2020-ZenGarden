@@ -12,6 +12,8 @@ public class PuzzlePiece
         PLANT,
         WEED,
         ROCK,
+        CRACKED_ROCK,
+        BROKEN_ROCK,
         ROCKY_GROUND,
     }
 
@@ -22,6 +24,10 @@ public class PuzzlePiece
 
     public HashSet<PuzzlePieceType> PlantableOn { get; internal set; }
     public HashSet<PuzzlePieceType> DissallowedNeighbors { get; internal set; }
+    public HashSet<PuzzlePieceType> AffectedBy { get; internal set; }
+    public PuzzlePieceType NextTypeForDamage { get; set; }
+
+
 
     internal bool IsPlantableOn(PuzzlePiece targetPiece)
     {
@@ -34,4 +40,11 @@ public class PuzzlePiece
         if (DissallowedNeighbors == null) return false;
         return DissallowedNeighbors.Contains(targetPiece.Type);
     }
+
+    internal bool IsAffectedBy(PuzzlePiece toolPuzzlePiece)
+    {
+        if (AffectedBy == null) return false;
+        return AffectedBy.Contains(toolPuzzlePiece.Type);
+    }
+
 }
