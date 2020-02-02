@@ -37,7 +37,27 @@ public class LevelSelect : MonoBehaviour
 
     public void PressLevel1()
     {
-        GameManager.Instance.LoadNewUnityScene("Story");
+        GameManager.Instance.LoadNewUnityScene("Level1");
+    }
+
+    public void PressLevel2()
+    {
+        GameManager.Instance.LoadNewUnityScene("Level2");
+    }
+
+    public void PressLevel3()
+    {
+        GameManager.Instance.LoadNewUnityScene("Level3");
+    }
+
+    public void PressLevel4()
+    {
+        GameManager.Instance.LoadNewUnityScene("Level4");
+    }
+
+    public void PressLevel5()
+    {
+        GameManager.Instance.LoadNewUnityScene("Level5");
     }
 
 }
