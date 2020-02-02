@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: weeds
+  m_Name: wall_pieces_top_corner_right
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: a7e07463ed45e094da0ca876c89444ef, type: 3}
+  m_Sprite: {fileID: -5531892435116111207, guid: faad69a5d7c56214a9584df2c99086dc,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
@@ -33,4 +34,4 @@ MonoBehaviour:
     e33: 1
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 1
-  m_ColliderType: 2
+  m_ColliderType: 1
