@@ -23,7 +23,7 @@ public class LevelSelect : MonoBehaviour
 
     void checkProgress()
     {
-        for(int i = 0; i < manager.GetCompon;
+        //for(int i = 0; i < manager.GetCompon;
     }
 
 }
