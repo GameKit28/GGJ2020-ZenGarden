@@ -5,6 +5,7 @@ using UnityEditor;
 
 using Story.Model;
 using Dialogue;
+using GameState;
 using JetBrains.Annotations;
 
 namespace Story {
@@ -16,7 +17,7 @@ namespace Story {
         public Background Background;
         public DialogCharacterController CharacterController;
 
-        public StoryScene StartingScene;
+        public StoryScene StartingSceneOverride;
 
         public StoryCharacter LeftCharacter;
         public StoryCharacter RightCharacter;
@@ -76,8 +77,9 @@ namespace Story {
                 DialogueBox.RegisterForOptionClickEvents(this);
                 DialogueBox.RegisterForNextClickEvents(this);
             }
-            
-            StartNewScene(StartingScene);
+
+            StoryScene firstScene = StartingSceneOverride ? StartingSceneOverride : GameManager.Instance.GetNextScene();
+            StartNewScene(firstScene);
 
             if (CharacterController)
             {
@@ -88,6 +90,7 @@ namespace Story {
         private void StartNewScene([NotNull] StoryScene scene)
         {
             Debug.Log("Starting Scene: " + scene);
+            GameManager.Instance.MarkSceneCompleted(scene);
             
             if (CharacterController)
             {
