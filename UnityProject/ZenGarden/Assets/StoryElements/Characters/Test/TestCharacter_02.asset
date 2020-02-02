@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: TestCharacter_02
   m_EditorClassIdentifier: 
   Name: Ernie
-  sprite: {fileID: 21300000, guid: 9fa8b740383ed9e439cd64c48f5678ef, type: 3}
-  talkingSprite: {fileID: 21300000, guid: 1b17d7ecb71413a4fad3751060e6dc55, type: 3}
+  sprite: {fileID: 21300000, guid: e00481b3cc63fb0428617cfbf7552f53, type: 3}
+  talkingSprite: {fileID: 21300000, guid: 8a43d6a742975104085bd57eaa8711a4, type: 3}
