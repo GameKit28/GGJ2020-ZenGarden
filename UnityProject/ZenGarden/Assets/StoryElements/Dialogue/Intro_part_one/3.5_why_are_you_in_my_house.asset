@@ -17,4 +17,4 @@ MonoBehaviour:
     Dialogue: Why are you in my house?
   Buttons:
   - ButtonText: Next
-    Target: {fileID: 0}
+    Target: {fileID: 11400000, guid: 32bd1d186501f514484b04a1dfea6ad8, type: 2}

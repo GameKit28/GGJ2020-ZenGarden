@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66fb31b2ca06583489bc3613d4514da1, type: 3}
   m_Name: IntroScene
   m_EditorClassIdentifier: 
-  Setting: {fileID: 11400000, guid: 66917545bd80fba43926eb06de621bc8, type: 2}
+  Setting: {fileID: 11400000, guid: 2caa92d608646a34795825a00b3e3fed, type: 2}
   StartingDialogue: {fileID: 11400000, guid: 386537da28f38e3468cc262c62f94eaf, type: 2}

@@ -19,4 +19,4 @@ MonoBehaviour:
     Dialogue: Actually, it's afternoon.
   Buttons:
   - ButtonText: Next
-    Target: {fileID: 0}
+    Target: {fileID: 11400000, guid: c49fedbb61920644e8930d4e67c1b884, type: 2}
