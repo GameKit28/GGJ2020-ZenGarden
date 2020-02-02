@@ -7,6 +7,7 @@ using UnityEngine.Tilemaps;
 public class Tool : MonoBehaviour
 {
     public TileBase tile;
+    public Sprite image;
     public int count;
 
     public Text countText;

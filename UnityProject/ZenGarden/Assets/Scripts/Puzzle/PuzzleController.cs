@@ -7,7 +7,6 @@ using static PuzzlePiece.PuzzlePieceType;
 
 public class PuzzleController : MonoBehaviour
 {
-
     static Dictionary<string, PuzzlePiece> puzzlePieceMap = new Dictionary<string, PuzzlePiece>()
     {
         { "dirt", new PuzzlePiece() { Type = PuzzlePiece.PuzzlePieceType.GROUND}},
@@ -82,19 +81,39 @@ public class PuzzleController : MonoBehaviour
             }
         }}
     };
+    private Tool _tool;
+    public Tool tool {
+        get {
+            return _tool;
+        }
+        set
+        {
+            _tool = value;
+            UpdateCursor();
+        }
+    }
 
-    public Tool tool;
+    private void UpdateCursor()
+    {
+      mouseController.SetMouseImage((tool != null && tool.count > 0) ? tool.image : null);
+    }
+
     private Tilemap tiles;
     private Dictionary<PuzzlePiece.PuzzlePieceType, TileBase> tileForType;
     public TileBase crackedRockTile;
     public TileBase brokenRockTile;
     public TileBase rockyGroundTile;
     public TileBase groundTile;
+    public UiFeedbackController uiFeedbackController;
+    private MouseController mouseController;
+
     // Start is called before the first frame update
     void Start()
     {
         tiles = GetComponent<Tilemap>();
-        GetComponent<MouseController>().onTileClicked = OnTileClicked;
+        mouseController = GetComponent<MouseController>();
+        mouseController.onTileClicked = OnTileClicked;
+        mouseController.onTileOver = OnTileOver;
         tileForType = new Dictionary<PuzzlePiece.PuzzlePieceType, TileBase>()
         {
             { PuzzlePiece.PuzzlePieceType.CRACKED_ROCK, crackedRockTile },
@@ -132,6 +151,32 @@ public class PuzzleController : MonoBehaviour
         {
             Debug.Log("No target piece");
         }
+    }
+
+    private void OnTileOver(Vector3Int position, TileBase tile)
+    {
+        uiFeedbackController.Clear();
+        if(!ToolIsValid())
+        {
+            return;
+        }
+
+        PuzzlePiece toolPiece = puzzlePieceMap[tool.tile.name];
+
+        PuzzlePiece targetPiece;
+        if (puzzlePieceMap.TryGetValue(tile.name, out targetPiece))
+        {
+            if (toolPiece.IsPlantableOn(targetPiece))
+            {
+                if (CheckNeighbors(position, toolPiece))
+                {
+                    uiFeedbackController.ShowPlantable(position);
+                    return;
+                }
+
+            }
+            uiFeedbackController.ShowUnplantable(position);
+        } 
     }
 
     private void PropogateEffects(Vector3Int position, PuzzlePiece toolPiece)
@@ -190,6 +235,7 @@ public class PuzzleController : MonoBehaviour
         if (!ToolIsValid()) { return; }
         tiles.SetTile(position, tool.tile);
         tool.count--;
+        UpdateCursor();
     }
 
     private bool ToolIsValid()
