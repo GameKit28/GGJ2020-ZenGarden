@@ -12,5 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a89edf5626fc1194b846ba23aed15354, type: 3}
   m_Name: 1_missed_this
   m_EditorClassIdentifier: 
-  Dialogues: []
-  Buttons: []
+  Dialogues:
+  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
+    Dialogue: I missed this.
+    Emotion: 0
+  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
+    Dialogue: Thanks, Sam. For the flower and for understanding.
+    Emotion: 0
+  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
+    Dialogue: I know it may not seem like a big deal, but I've just been so scared.
+      What if I can't garden without my mom?
+    Emotion: 0
+  - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
+    Dialogue: It's okay to feel that way. But you can do it, even without her here.
+      You just have to keep trying.
+    Emotion: 0
+  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
+    Dialogue: You're a great friend. You really make me feel like I can do this.
+    Emotion: 0
+  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
+    Dialogue: And one of these days, I'm gonna make you a great garden.
+    Emotion: 0
+  - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
+    Dialogue: Thank you Jamie. Take your time.
+    Emotion: 1
+  Buttons:
+  - ButtonText: Next
+    Target: {fileID: 11500000, guid: 779f8373d1fcbf64f8b56ec3a1da7824, type: 3}

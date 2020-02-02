@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66fb31b2ca06583489bc3613d4514da1, type: 3}
-  m_Name: 1_D.3_yard
+  m_Name: 0.5_porch_scene
   m_EditorClassIdentifier: 
-  Setting: {fileID: 11400000, guid: 2caa92d608646a34795825a00b3e3fed, type: 2}
-  StartingDialogue: {fileID: 11400000, guid: d1e21c0b3f5a8304282b03853aab1c22, type: 2}
+  Setting: {fileID: 0}
+  StartingDialogue: {fileID: 0}
