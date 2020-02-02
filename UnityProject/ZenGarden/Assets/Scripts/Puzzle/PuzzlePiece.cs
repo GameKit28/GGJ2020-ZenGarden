@@ -15,6 +15,8 @@ public class PuzzlePiece
         CRACKED_ROCK,
         BROKEN_ROCK,
         ROCKY_GROUND,
+        RACOON,
+        ROSE_BUSH,
     }
 
     public PuzzlePieceType Type { get; set; }
