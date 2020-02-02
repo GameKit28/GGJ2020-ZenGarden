@@ -81,8 +81,23 @@ public class PuzzleController : MonoBehaviour
             }
         }}
     };
+    private Tool _tool;
+    public Tool tool {
+        get {
+            return _tool;
+        }
+        set
+        {
+            _tool = value;
+            UpdateCursor();
+        }
+    }
 
-    public Tool tool;
+    private void UpdateCursor()
+    {
+      mouseController.SetMouseImage((tool != null && tool.count > 0) ? tool.image : null);
+    }
+
     private Tilemap tiles;
     private Dictionary<PuzzlePiece.PuzzlePieceType, TileBase> tileForType;
     public TileBase crackedRockTile;
@@ -90,13 +105,15 @@ public class PuzzleController : MonoBehaviour
     public TileBase rockyGroundTile;
     public TileBase groundTile;
     public UiFeedbackController uiFeedbackController;
+    private MouseController mouseController;
 
     // Start is called before the first frame update
     void Start()
     {
         tiles = GetComponent<Tilemap>();
-        GetComponent<MouseController>().onTileClicked = OnTileClicked;
-        GetComponent<MouseController>().onTileOver = OnTileOver;
+        mouseController = GetComponent<MouseController>();
+        mouseController.onTileClicked = OnTileClicked;
+        mouseController.onTileOver = OnTileOver;
         tileForType = new Dictionary<PuzzlePiece.PuzzlePieceType, TileBase>()
         {
             { PuzzlePiece.PuzzlePieceType.CRACKED_ROCK, crackedRockTile },
@@ -218,6 +235,7 @@ public class PuzzleController : MonoBehaviour
         if (!ToolIsValid()) { return; }
         tiles.SetTile(position, tool.tile);
         tool.count--;
+        UpdateCursor();
     }
 
     private bool ToolIsValid()
