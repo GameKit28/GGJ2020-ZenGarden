@@ -8,5 +8,14 @@ namespace Story.Model {
     {
         public StoryCharacter Speaker;
         public string Dialogue;
+        public Emotion Emotion = Emotion.Neutral;
+    }
+
+    public enum Emotion
+    {
+        Neutral,
+        Happy,
+        Upset,
+        Stoned,
     }
 }
