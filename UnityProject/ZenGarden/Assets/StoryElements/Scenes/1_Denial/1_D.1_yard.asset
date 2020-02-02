@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66fb31b2ca06583489bc3613d4514da1, type: 3}
+  m_Name: 1_D.1_yard
+  m_EditorClassIdentifier: 
+  Setting: {fileID: 11400000, guid: 2caa92d608646a34795825a00b3e3fed, type: 2}
+  StartingDialogue: {fileID: 11400000, guid: 386537da28f38e3468cc262c62f94eaf, type: 2}

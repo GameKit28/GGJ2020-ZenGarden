@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dialogues:
   - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
-    Dialogue: Then take the daisy. Take the first step.
+    Dialogue: Then take the Daisy. Take that first step. You don't have to fix everything
+      at once. But don't let your mother's garden or her memory waste away.
+    Emotion: 1
   Buttons: []

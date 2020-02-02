@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dialogues:
   - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
-    Dialogue: You just have to start.
+    Dialogue: You just have to start. It's what she would want.
+    Emotion: 1
   Buttons:
   - ButtonText: Next
     Target: {fileID: 11400000, guid: e31b5579d8a807441908507be8e0fbb5, type: 2}
