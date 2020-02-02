@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:UnityProject/ZenGarden/Assets/Scripts/Menu.meta
-guid: 21f344c9fb261dc45add4aeac88944cb
-=======
-guid: c3759476790e6ec408803e202b4eb0a1
->>>>>>> b31dd817cb44478c6079a7dd88edfcdc0d9e429c:UnityProject/ZenGarden/Assets/StoryElements/Dialogue/Into_part_two_electric_boogalo.meta
+guid: e850722b1cbfa744da0f6a0dd8ebbecc
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
