@@ -15,14 +15,19 @@ MonoBehaviour:
   Dialogues:
   - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
     Dialogue: You didn't answer the door and I was worried.
+    Emotion: 2
   - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
     Dialogue: I got you something.
+    Emotion: 1
   - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
     Dialogue: A daisy?
+    Emotion: 0
   - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
     Dialogue: A start.
+    Emotion: 0
   - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
     Dialogue: You still love gardening, don't you?
+    Emotion: 1
   Buttons:
   - ButtonText: I mean, yeah...
     Target: {fileID: 11400000, guid: e5bd05a5b67b98342a9c73c46e090dab, type: 2}

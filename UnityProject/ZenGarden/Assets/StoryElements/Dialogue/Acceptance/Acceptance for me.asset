@@ -10,15 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a89edf5626fc1194b846ba23aed15354, type: 3}
-  m_Name: 1.5_trip
+  m_Name: Acceptance for me
   m_EditorClassIdentifier: 
   Dialogues:
   - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
-    Dialogue: But what if I trip?
+    Dialogue: I feel like I'm finally seeing in color again.
     Emotion: 0
-  - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
-    Dialogue: Then you get back up.
-    Emotion: 1
+  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
+    Dialogue: I think I'm doing the right thing, too.
+    Emotion: 0
+  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
+    Dialogue: She loved gardening. She taught me to love gardening.
+    Emotion: 0
   Buttons:
   - ButtonText: Next
-    Target: {fileID: 11400000, guid: fc61889ec40e0344f9833a71802aa687, type: 2}
+    Target: {fileID: 11400000, guid: 1cdb6061f0a2eb545a949980b80d05e1, type: 2}

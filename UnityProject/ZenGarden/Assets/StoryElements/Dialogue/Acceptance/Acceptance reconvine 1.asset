@@ -10,15 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a89edf5626fc1194b846ba23aed15354, type: 3}
-  m_Name: 1.5_trip
+  m_Name: Acceptance reconvine 1
   m_EditorClassIdentifier: 
   Dialogues:
   - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
-    Dialogue: But what if I trip?
+    Dialogue: It's almost like if I can preserve her gardens, she'll still be here.
+    Emotion: 0
+  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
+    Dialogue: And I'll be okay.
     Emotion: 0
   - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
-    Dialogue: Then you get back up.
+    Dialogue: That's great to hear, Jamie.
+    Emotion: 0
+  - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
+    Dialogue: I'm really glad you're feeling better.
     Emotion: 1
   Buttons:
   - ButtonText: Next
-    Target: {fileID: 11400000, guid: fc61889ec40e0344f9833a71802aa687, type: 2}
+    Target: {fileID: 11400000, guid: 8315196443febcb45998a444bc268912, type: 2}
