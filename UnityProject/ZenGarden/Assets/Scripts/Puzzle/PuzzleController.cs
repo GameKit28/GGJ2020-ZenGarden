@@ -18,6 +18,7 @@ public class PuzzleController : MonoBehaviour
             AffectedBy = new HashSet<PuzzlePiece.PuzzlePieceType>()
             {
                 PuzzlePiece.PuzzlePieceType.PLANT,
+                PuzzlePiece.PuzzlePieceType.ROSE_BUSH,
             },
             NextTypeForDamage = PuzzlePiece.PuzzlePieceType.CRACKED_ROCK
         }},
@@ -26,6 +27,7 @@ public class PuzzleController : MonoBehaviour
             AffectedBy = new HashSet<PuzzlePiece.PuzzlePieceType>()
             {
                 PuzzlePiece.PuzzlePieceType.PLANT,
+                PuzzlePiece.PuzzlePieceType.ROSE_BUSH,
             },
             NextTypeForDamage = PuzzlePiece.PuzzlePieceType.BROKEN_ROCK
         }},
@@ -34,8 +36,17 @@ public class PuzzleController : MonoBehaviour
             AffectedBy = new HashSet<PuzzlePiece.PuzzlePieceType>()
             {
                 PuzzlePiece.PuzzlePieceType.PLANT,
+                PuzzlePiece.PuzzlePieceType.ROSE_BUSH,
             },
             NextTypeForDamage = PuzzlePiece.PuzzlePieceType.ROCKY_GROUND
+        }},
+        { "racoon", new PuzzlePiece() {
+            Type = PuzzlePiece.PuzzlePieceType.RACOON,
+            AffectedBy = new HashSet<PuzzlePiece.PuzzlePieceType>()
+            {
+                PuzzlePiece.PuzzlePieceType.ROSE_BUSH,
+            },
+            NextTypeForDamage = PuzzlePiece.PuzzlePieceType.GROUND
         }},
         { "daisy", new PuzzlePiece() {
             Type = PuzzlePiece.PuzzlePieceType.PLANT,
@@ -45,7 +56,8 @@ public class PuzzleController : MonoBehaviour
             },
             DissallowedNeighbors= new HashSet<PuzzlePiece.PuzzlePieceType>()
             {
-                PuzzlePiece.PuzzlePieceType.WEED
+                PuzzlePiece.PuzzlePieceType.WEED,
+                PuzzlePiece.PuzzlePieceType.RACOON,
             },
         }},
         { "tulips", new PuzzlePiece() {
@@ -55,6 +67,18 @@ public class PuzzleController : MonoBehaviour
                 PuzzlePiece.PuzzlePieceType.GROUND,
                 PuzzlePiece.PuzzlePieceType.ROCKY_GROUND,
                 PuzzlePiece.PuzzlePieceType.WEED
+            },
+            DissallowedNeighbors= new HashSet<PuzzlePiece.PuzzlePieceType>()
+            {
+                PuzzlePiece.PuzzlePieceType.RACOON,
+            },
+        }},
+        { "rose_bush", new PuzzlePiece() {
+            Type = PuzzlePiece.PuzzlePieceType.ROSE_BUSH,
+            PlantableOn = new HashSet<PuzzlePiece.PuzzlePieceType>()
+            {
+                PuzzlePiece.PuzzlePieceType.GROUND,
+                PuzzlePiece.PuzzlePieceType.ROCKY_GROUND,
             }
         }}
     };
@@ -65,6 +89,7 @@ public class PuzzleController : MonoBehaviour
     public TileBase crackedRockTile;
     public TileBase brokenRockTile;
     public TileBase rockyGroundTile;
+    public TileBase groundTile;
     // Start is called before the first frame update
     void Start()
     {
@@ -75,6 +100,7 @@ public class PuzzleController : MonoBehaviour
             { PuzzlePiece.PuzzlePieceType.CRACKED_ROCK, crackedRockTile },
             { PuzzlePiece.PuzzlePieceType.BROKEN_ROCK, brokenRockTile },
             { PuzzlePiece.PuzzlePieceType.ROCKY_GROUND, rockyGroundTile },
+            { PuzzlePiece.PuzzlePieceType.GROUND, groundTile },
         };
     }
 
