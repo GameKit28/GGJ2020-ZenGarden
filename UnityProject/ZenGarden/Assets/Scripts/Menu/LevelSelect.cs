@@ -22,7 +22,7 @@ public class LevelSelect : MonoBehaviour
 
     private void Update()
     {
-        
+
     }
 
     void checkProgress()
