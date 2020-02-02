@@ -11,9 +11,13 @@ public class LevelSelect : MonoBehaviour
     private void Start()
     {
         manager = GameObject.Find("GameManager");
-        //GameManager gameManager = manager.GetComponent<GameManager>();
         GameManager.Instance.GetScenesCompleted();
         levelButtons = GameObject.FindGameObjectsWithTag("LevelButton");
+        for(int i = 0; i < levelButtons.Length; i++)
+        {
+            levelButtons[i].SetActive(false);
+        }
+        checkProgress();
     }
 
     private void Update()
@@ -23,7 +27,10 @@ public class LevelSelect : MonoBehaviour
 
     void checkProgress()
     {
-        for(int i = 0; i < manager.GetCompon;
+        for(int i = 0; i < GameManager.Instance.GetScenesCompleted(); i++)
+        {
+            levelButtons[i].SetActive(true);
+        }
     }
 
 }
