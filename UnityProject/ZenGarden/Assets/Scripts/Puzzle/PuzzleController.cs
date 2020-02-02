@@ -26,7 +26,7 @@ public class PuzzleController : MonoBehaviour
 
     private void OnTileClicked(Vector3Int position, TileBase tile)
     {
-        if (tool == null || tool.count <= 0)
+        if (!ToolIsValid())
         {
             return;
         }
@@ -43,9 +43,14 @@ public class PuzzleController : MonoBehaviour
 
     private void PaintTile(Vector3Int position)
     {
-        if (tool == null || tool.count <= 0) { return; }
+        if (!ToolIsValid()) { return; }
         tiles.SetTile(position, tool.tile);
         tool.count--;
+    }
+
+    private bool ToolIsValid()
+    {
+        return tool != null && tool.count > 0;
     }
 
 
