@@ -17,4 +17,6 @@ MonoBehaviour:
     Dialogue: Then take the Daisy. Take that first step. You don't have to fix everything
       at once. But don't let your mother's garden or her memory waste away.
     Emotion: 1
-  Buttons: []
+  Buttons:
+  - ButtonText: '*Take Daisy*'
+    Target: {fileID: 11400000, guid: 2af6d952cd2924b4ba9ceaf7a9c002dd, type: 2}
