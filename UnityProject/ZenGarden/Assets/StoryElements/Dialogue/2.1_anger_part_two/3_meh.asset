@@ -12,5 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a89edf5626fc1194b846ba23aed15354, type: 3}
   m_Name: 3_meh
   m_EditorClassIdentifier: 
-  Dialogues: []
-  Buttons: []
+  Dialogues:
+  - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
+    Dialogue: That's okay. I think it's looking good. It doesn't have to be perfect
+      to be enjoyable.
+    Emotion: 0
+  Buttons:
+  - ButtonText: Next
+    Target: {fileID: 11400000, guid: 5fedb167a80e9944383f45649e1c2409, type: 2}
