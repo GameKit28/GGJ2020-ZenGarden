@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc5336827bef7e4f8edaf846a2a1894, type: 3}
+  m_Name: TestSetting_01
+  m_EditorClassIdentifier: 
+  BackgroundImage: {fileID: 21300000, guid: 2c18d1813288f694d9da137955f8ac7b, type: 3}

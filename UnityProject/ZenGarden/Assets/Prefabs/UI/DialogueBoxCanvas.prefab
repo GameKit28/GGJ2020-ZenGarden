@@ -106,12 +106,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 520760014388033913}
   - {fileID: 2295453938872049744}
   - {fileID: 2295453939983479842}
   - {fileID: 2295453939503968820}
   m_Father: {fileID: 2295453940103483550}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -185,7 +184,7 @@ RectTransform:
   m_Children:
   - {fileID: 2295453939421758787}
   m_Father: {fileID: 2295453938751235200}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -470,7 +469,7 @@ RectTransform:
   m_Children:
   - {fileID: 2295453938890801169}
   m_Father: {fileID: 2295453938751235200}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -621,7 +620,7 @@ RectTransform:
   m_Children:
   - {fileID: 2295453939584592977}
   m_Father: {fileID: 2295453938751235200}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -695,6 +694,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 520760014388033913}
   - {fileID: 2295453938751235200}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -714,7 +714,8 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 4815065874946370459, guid: e6b4fd6c806ceec44b5cc5bffba5e390,
+    type: 3}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -740,8 +741,9 @@ MonoBehaviour:
   NameText: {fileID: 2295453939584592976}
   DialogueText: {fileID: 2295453938890801168}
   NextButton: {fileID: 2295453939421758786}
-  DefaultDialogue: {fileID: 11400000, guid: 9904699ea56b25843b0fefde26772307, type: 2}
-  NextDialogue: {fileID: 11400000, guid: 386537da28f38e3468cc262c62f94eaf, type: 2}
+  DefaultDialogue:
+    Speaker: {fileID: 11400000, guid: 4a73b312437d1d14b8010a6401915809, type: 2}
+    Dialogue: Something went wrong..
 --- !u!114 &2295453940103483548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -776,7 +778,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2295453938751235200}
+    m_TransformParent: {fileID: 2295453940103483550}
     m_Modifications:
     - target: {fileID: 5386987540850057168, guid: d75b4e04ceb28ee48a1e88c1436b33d2,
         type: 3}
@@ -796,17 +798,17 @@ PrefabInstance:
     - target: {fileID: 5386987540850057168, guid: d75b4e04ceb28ee48a1e88c1436b33d2,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5386987540850057168, guid: d75b4e04ceb28ee48a1e88c1436b33d2,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5386987540850057168, guid: d75b4e04ceb28ee48a1e88c1436b33d2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5386987540850057168, guid: d75b4e04ceb28ee48a1e88c1436b33d2,
         type: 3}
@@ -836,17 +838,17 @@ PrefabInstance:
     - target: {fileID: 5386987540850057168, guid: d75b4e04ceb28ee48a1e88c1436b33d2,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 1.2999878
       objectReference: {fileID: 0}
     - target: {fileID: 5386987540850057168, guid: d75b4e04ceb28ee48a1e88c1436b33d2,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -668.2
       objectReference: {fileID: 0}
     - target: {fileID: 5386987540850057168, guid: d75b4e04ceb28ee48a1e88c1436b33d2,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -46.200073
       objectReference: {fileID: 0}
     - target: {fileID: 5386987540850057168, guid: d75b4e04ceb28ee48a1e88c1436b33d2,
         type: 3}

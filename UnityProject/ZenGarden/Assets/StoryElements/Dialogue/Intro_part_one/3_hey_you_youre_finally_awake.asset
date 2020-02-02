@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a89edf5626fc1194b846ba23aed15354, type: 3}
+  m_Name: 3_hey_you_youre_finally_awake
+  m_EditorClassIdentifier: 
+  Dialogues:
+  - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
+    Dialogue: Jamie! Wake up!
+  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
+    Dialogue: '*groan*'
+  Buttons:
+  - ButtonText: Good morning, Sam
+    Target: {fileID: 11400000, guid: b250bf18835cfd047b17f9ef9d007c9c, type: 2}
+  - ButtonText: Why are you in my house?
+    Target: {fileID: 11400000, guid: 55b943e31c435614bb1bc17bad686455, type: 2}
