@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: a4bbb8c754df8fe40b25d56df45b9da8
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Zen
+  fontNames:
+  - Zen
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3af44f6e0573d394a839772dec391e7e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
