@@ -66,6 +66,9 @@ namespace Story {
                         } else if (target is StoryDialogueSequence)
                         {
                             StartNewSequence((StoryDialogueSequence)target);
+                        } else if (target is UnitySceneTransition)
+                        {
+                            GameManager.Instance.LoadNewUnityScene((target as UnitySceneTransition).SceneToLoad);
                         }
                     }
                 }

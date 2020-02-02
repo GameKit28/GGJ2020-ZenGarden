@@ -23,4 +23,4 @@ MonoBehaviour:
     Dialogue: Three
   Buttons:
   - ButtonText: Baby Don't Hurt Me
-    Target: {fileID: 11400000, guid: a71414bd38ad60c44bb58ad10a5ce49d, type: 2}
+    Target: {fileID: 11400000, guid: fde2645e0aa3a4742aeb25878df8e432, type: 2}
