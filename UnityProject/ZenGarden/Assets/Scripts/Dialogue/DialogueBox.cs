@@ -11,8 +11,13 @@ namespace Dialogue
     {
         public Text NameText;
         public Text DialogueText;
-        public Button NextButton; 
 
+        public GameObject NextButtonPanel;
+        public GameObject DynamicButtonPanel;
+
+        public GameObject DynamicButtonPrefab;
+
+        
         public StoryDialogue DefaultDialogue;
 
         List<INextClickHandler> NextClickListeners = new List<INextClickHandler>();
@@ -32,6 +37,7 @@ namespace Dialogue
         }
     
         public void ClickOptionEvent(StoryOption option) {
+            Debug.Log("Dialogue Box Received Option: " + option.ButtonText);
             foreach (IOptionClickHandler handler in OptionClickListeners)
             {
                 handler.HandleOptionClick(option);
@@ -51,6 +57,35 @@ namespace Dialogue
         public void SetDialogue(StoryDialogue dialogue) {
             NameText.text = dialogue.Speaker.Name;
             DialogueText.text = dialogue.Dialogue;
+        }
+
+        public void SetOptions(List<StoryOption> options)
+        {
+            if (options.Count == 0)
+            {
+                //Enable Just the Next Button
+                NextButtonPanel.SetActive(true);
+                DynamicButtonPanel.SetActive(false);
+            }
+            else
+            {
+                NextButtonPanel.SetActive(false);
+                DynamicButtonPanel.SetActive(true);
+                
+                //Delete all children
+                foreach (Transform child in DynamicButtonPanel.transform)
+                {
+                    GameObject.Destroy(child.gameObject);
+                }
+                
+                //Create new children
+                foreach (StoryOption sOption in options)
+                {
+                    GameObject newButton = GameObject.Instantiate(DynamicButtonPrefab, DynamicButtonPanel.transform);
+                    newButton.GetComponentInChildren<Text>().text = sOption.ButtonText;
+                    newButton.GetComponent<Button>().onClick.AddListener(() => {ClickOptionEvent(sOption);});
+                }
+            }
         }
     }
 

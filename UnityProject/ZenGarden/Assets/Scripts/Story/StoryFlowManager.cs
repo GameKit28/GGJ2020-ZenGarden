@@ -23,7 +23,20 @@ namespace Story {
         public StoryCharacter RightCharacter;
 
         public void HandleOptionClick(StoryOption option) {
-            Debug.Log("I got the option click event!");
+            Debug.Log("I got the option click event! " + option.ButtonText);
+
+            //Let's just assume they clicked the first button for now
+            ITransitionDestination target = option.GetTarget();
+            if (target is StoryScene)
+            {
+                StartNewScene((StoryScene)target);
+            } else if (target is StoryDialogueSequence)
+            {
+                StartNewSequence((StoryDialogueSequence)target);
+            } else if (target is UnitySceneTransition)
+            {
+                GameManager.Instance.LoadNewUnityScene((target as UnitySceneTransition).SceneToLoad);
+            }
         }
 
         public void HandleNextClick() {
@@ -47,30 +60,11 @@ namespace Story {
                         }
                     }
                     
-                    DialogueBox.SetDialogue(dialogue);
+                    SetDialogue();
                 }
                 else
                 {
-                    //We've Reached the End of Our Sequence
-                    if (currentDialogueSequence.Buttons.Count == 0)
-                    {
-                        //Let's just repeat the sequence. No where to go.
-                    }
-                    else if (currentDialogueSequence.Buttons.Count > 0)
-                    {
-                        //Let's just assume they clicked the first button for now
-                        ITransitionDestination target = currentDialogueSequence.Buttons[0].GetTarget();
-                        if (target is StoryScene)
-                        {
-                            StartNewScene((StoryScene)target);
-                        } else if (target is StoryDialogueSequence)
-                        {
-                            StartNewSequence((StoryDialogueSequence)target);
-                        } else if (target is UnitySceneTransition)
-                        {
-                            GameManager.Instance.LoadNewUnityScene((target as UnitySceneTransition).SceneToLoad);
-                        }
-                    }
+                    Debug.LogError("We shouldn't have reached this point because the NextButtonPanel should be hidden.");
                 }
             }
         }
@@ -131,8 +125,25 @@ namespace Story {
             
             if (DialogueBox)
             {
-                DialogueBox.SetDialogue(dialogue);
+                SetDialogue();
             }
+        }
+
+        private void SetDialogue()
+        {
+            
+            bool lastInSequence = currentDialogueSequenceIndex == currentDialogueSequence.Dialogues.Count - 1;
+            if (lastInSequence)
+            {
+                DialogueBox.SetOptions(currentDialogueSequence.Buttons);
+            }
+            else
+            {
+                DialogueBox.SetOptions(new List<StoryOption>());
+            }
+            
+            StoryDialogue dialogue = currentDialogueSequence.Dialogues[(int) currentDialogueSequenceIndex];
+            DialogueBox.SetDialogue(dialogue);
         }
     }
 }

@@ -22,5 +22,7 @@ MonoBehaviour:
   - Speaker: {fileID: 11400000, guid: 715d2af1bcdddab45ae215a3818231bb, type: 2}
     Dialogue: Three
   Buttons:
-  - ButtonText: Bum Bum
+  - ButtonText: Option 1 Next
     Target: {fileID: 11400000, guid: bce35c5296c1fd54a94680a04ddd5cc7, type: 2}
+  - ButtonText: Option 2 Skip
+    Target: {fileID: 11400000, guid: 2c90423e7336d724bb3f747cfe87a0b1, type: 2}
