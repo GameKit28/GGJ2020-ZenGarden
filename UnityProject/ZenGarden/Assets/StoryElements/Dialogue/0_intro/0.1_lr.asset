@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dialogues:
   - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
-    Dialogue: 
+    Dialogue: My name is Jamie. This is my house. I used to live here with my mother,
+      but she died recently.
     Emotion: 0
   - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
-    Dialogue: 
+    Dialogue: It's been really hard for me since she died. Everything looks so dark
+      now. I guess she was my light.
     Emotion: 0
   Buttons:
   - ButtonText: Next
-    Target: {fileID: 0}
+    Target: {fileID: 11400000, guid: 645ed9ed575534348acdf6390d4078d1, type: 2}

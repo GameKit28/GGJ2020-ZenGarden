@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66fb31b2ca06583489bc3613d4514da1, type: 3}
   m_Name: 0.4_bed_scene
   m_EditorClassIdentifier: 
-  Setting: {fileID: 0}
-  StartingDialogue: {fileID: 0}
+  Setting: {fileID: 11400000, guid: 36c0002fd51a6d34d9545deb016b9e87, type: 2}
+  StartingDialogue: {fileID: 11400000, guid: dee6ef92e242aac4b8feaa67ba41e199, type: 2}

@@ -12,5 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a89edf5626fc1194b846ba23aed15354, type: 3}
   m_Name: 0.2_yard
   m_EditorClassIdentifier: 
-  Dialogues: []
-  Buttons: []
+  Dialogues:
+  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
+    Dialogue: This was her garden. She had such a passion for gardening that I couldn't
+      help but love gardening too.
+    Emotion: 0
+  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
+    Dialogue: ' I haven''t been able to bring myself to touch it. I''m scared I''ll
+      lose her if I mess up her garden.'
+    Emotion: 0
+  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
+    Dialogue: I guess I already messed it up, because it's all overgrown now.
+    Emotion: 0
+  Buttons:
+  - ButtonText: Next
+    Target: {fileID: 11400000, guid: f7f9866a1dac2214d873f7a18729be1e, type: 2}
