@@ -4,8 +4,8 @@ using UnityEngine;
 using Utilities;
 
 namespace Story.Model {
-    [CreateAssetMenu()]
-    public class StoryDialogueSequence : NamedScriptableObject, ITransitionDestination
+    [CreateAssetMenu(fileName = "New Character", menuName = GameMenuName + "Story Dialogue Sequence")]
+    public class StoryDialogueSequence : StoryAsset, ITransitionDestination
     {
         public List<StoryDialogue> Dialogues = new List<StoryDialogue>();
 

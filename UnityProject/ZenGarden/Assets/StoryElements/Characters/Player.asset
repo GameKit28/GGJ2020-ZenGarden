@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   Name: Jamie
+  sprite: {fileID: 21300000, guid: e00481b3cc63fb0428617cfbf7552f53, type: 3}
+  talkingSprite: {fileID: 21300000, guid: 8a43d6a742975104085bd57eaa8711a4, type: 3}

@@ -5,8 +5,8 @@ using UnityEngine.UI;
 using Utilities;
 
 namespace Story.Model {
-    [CreateAssetMenu()]
-    public class StorySetting : NamedScriptableObject 
+    [CreateAssetMenu(fileName = "New Story Setting", menuName = GameMenuName + "Story Setting")]
+    public class StorySetting : StoryAsset
     {
         public Sprite BackgroundImage;
         //public Music
