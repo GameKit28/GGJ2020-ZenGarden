@@ -1935,22 +1935,22 @@ PrefabInstance:
     - target: {fileID: 1849515683423086792, guid: 1a766f8057da7454683e8a93d381e9a9,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -20.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1849515683423086792, guid: 1a766f8057da7454683e8a93d381e9a9,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 49.5
+      value: 0.012463
       objectReference: {fileID: 0}
     - target: {fileID: 1849515683423086792, guid: 1a766f8057da7454683e8a93d381e9a9,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 864.2
+      value: 1920
       objectReference: {fileID: 0}
     - target: {fileID: 1849515683423086792, guid: 1a766f8057da7454683e8a93d381e9a9,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 875.3
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 1849515683423086792, guid: 1a766f8057da7454683e8a93d381e9a9,
         type: 3}
@@ -2141,7 +2141,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 385378941
   m_SortingOrder: 0
   m_TargetDisplay: 0
