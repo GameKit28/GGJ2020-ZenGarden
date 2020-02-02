@@ -516,6 +516,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c,
         type: 2}
+    - target: {fileID: 3382398604292657629, guid: 86a3fbe46552f364bb26de24d736cdb4,
+        type: 3}
+      propertyPath: StartingSceneOverride
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86a3fbe46552f364bb26de24d736cdb4, type: 3}
 --- !u!1001 &4684457584682663482

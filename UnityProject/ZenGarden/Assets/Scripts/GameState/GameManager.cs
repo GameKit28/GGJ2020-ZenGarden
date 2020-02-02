@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Story.Model;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace GameState
 {
@@ -47,6 +48,12 @@ namespace GameState
         public bool HasCompletedAnyScenes()
         {
             return CompletedStoryScenes.Count > 0;
+        }
+
+        public void LoadNewUnityScene(string sceneName)
+        {
+            Debug.Log("Loading New Unity Scene: " + sceneName);
+            SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         }
     }
 }

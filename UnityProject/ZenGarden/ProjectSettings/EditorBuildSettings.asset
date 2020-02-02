@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PuzzlePlayground.unity
     guid: 81aa5368670c61648b786db6cd7e3cc5
+  - enabled: 1
+    path: Assets/Scenes/Story.unity
+    guid: 5811fc420de02e8438cbba421c4d6984
   m_configObjects: {}
