@@ -81,6 +81,12 @@ public class PuzzleController : MonoBehaviour
             }
         }}
     };
+
+    internal void OnInventoryEmpty()
+    {
+        
+    }
+
     private Tool _tool;
     public Tool tool {
         get {

@@ -143,6 +143,7 @@ namespace Story {
             }
             
             StoryDialogue dialogue = currentDialogueSequence.Dialogues[(int) currentDialogueSequenceIndex];
+            CharacterController.SetCharacterEmotion(dialogue.Speaker, dialogue.Emotion);
             DialogueBox.SetDialogue(dialogue);
         }
     }
