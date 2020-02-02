@@ -166,6 +166,10 @@ public class PuzzleController : MonoBehaviour
         PuzzlePiece targetPiece;
         if (puzzlePieceMap.TryGetValue(tile.name, out targetPiece))
         {
+            if (toolPiece == targetPiece)
+            {
+                return;
+            }
             if (toolPiece.IsPlantableOn(targetPiece))
             {
                 if (CheckNeighbors(position, toolPiece))

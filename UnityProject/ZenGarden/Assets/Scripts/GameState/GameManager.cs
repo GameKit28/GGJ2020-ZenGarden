@@ -13,6 +13,8 @@ namespace GameState
         public List<StoryScene> StartingStoryScenes = new List<StoryScene>();
         
         private HashSet<StoryScene> CompletedStoryScenes = new HashSet<StoryScene>();
+
+
         
         private void Awake()
         {
@@ -48,6 +50,11 @@ namespace GameState
         public bool HasCompletedAnyScenes()
         {
             return CompletedStoryScenes.Count > 0;
+        }
+
+        public int GetScenesCompleted()
+        {
+            return CompletedStoryScenes.Count;
         }
 
         public void LoadNewUnityScene(string sceneName)
