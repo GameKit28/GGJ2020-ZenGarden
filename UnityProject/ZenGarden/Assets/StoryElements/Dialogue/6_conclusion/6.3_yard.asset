@@ -12,5 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a89edf5626fc1194b846ba23aed15354, type: 3}
   m_Name: 6.3_yard
   m_EditorClassIdentifier: 
-  Dialogues: []
-  Buttons: []
+  Dialogues:
+  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
+    Dialogue: I found myself out here in the garden.
+    Emotion: 0
+  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
+    Dialogue: I still miss my mom, but I'm grateful for all she taught me when she
+      was here.
+    Emotion: 0
+  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
+    Dialogue: I hope she's proud of me.
+    Emotion: 0
+  - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
+    Dialogue: I know she is.
+    Emotion: 1
+  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
+    Dialogue: Thank you.
+    Emotion: 0
+  Buttons:
+  - ButtonText: 
+    Target: {fileID: 11400000, guid: 99154fc4331388345aead7c205f29a03, type: 2}
