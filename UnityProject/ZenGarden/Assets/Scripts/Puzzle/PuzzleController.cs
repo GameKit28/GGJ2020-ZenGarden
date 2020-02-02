@@ -26,18 +26,26 @@ public class PuzzleController : MonoBehaviour
 
     private void OnTileClicked(Vector3Int position, TileBase tile)
     {
-        if (tool == null)
+        if (tool == null || tool.count <= 0)
         {
             return;
         }
+
         PuzzlePiece tryGetValue;
         if (puzzlePieceMap.TryGetValue(tile.name, out tryGetValue))
         {
             if(tryGetValue.IsPlantable)
             {
-              tiles.SetTile(position, tool.tile);
+              PaintTile(position);
             }
         }
+    }
+
+    private void PaintTile(Vector3Int position)
+    {
+        if (tool == null || tool.count <= 0) { return; }
+        tiles.SetTile(position, tool.tile);
+        tool.count--;
     }
 
 
