@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using GameState;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using static PuzzlePiece.PuzzlePieceType;
@@ -145,6 +146,7 @@ public class PuzzleController : MonoBehaviour
             {
                 if (CheckNeighbors(position, toolPiece))
                 {
+                    GameManager.Instance.PlaySoundClip("dirt_pick_01");
                     PaintTile(position);
                     PropogateEffects(position, toolPiece);
                     return;
