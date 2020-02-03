@@ -14,7 +14,9 @@ namespace GameState
         
         private HashSet<StoryScene> CompletedStoryScenes = new HashSet<StoryScene>();
 
+        public AudioSource AudioSource;
 
+        public List<AudioClip> Sounds;
         
         private void Awake()
         {
@@ -27,6 +29,11 @@ namespace GameState
             {
                 GameObject.Destroy(this.gameObject);
             }
+        }
+
+        private void Start()
+        {
+            AudioSource = GetComponent<AudioSource>();
         }
 
         public StoryScene GetNextScene()
@@ -61,6 +68,19 @@ namespace GameState
         {
             Debug.Log("Loading New Unity Scene: " + sceneName);
             SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        }
+
+        public void PlaySoundClip(string name)
+        {
+            AudioClip clipToPlay = null;
+            foreach (AudioClip clip in Sounds)
+            {
+                if (clip.name == name)
+                {
+                    clipToPlay = clip;
+                }
+            }
+            AudioSource.PlayOneShot(clipToPlay);
         }
     }
 }
