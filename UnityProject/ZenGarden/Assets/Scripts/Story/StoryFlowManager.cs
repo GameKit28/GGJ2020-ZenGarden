@@ -40,6 +40,7 @@ namespace Story {
         }
 
         public void HandleNextClick() {
+            GameManager.Instance.PlaySoundClip("2 UI CLICK 1");
             if (currentDialogueSequence)
             {
                 if (currentDialogueSequenceIndex < currentDialogueSequence.Dialogues.Count - 1)

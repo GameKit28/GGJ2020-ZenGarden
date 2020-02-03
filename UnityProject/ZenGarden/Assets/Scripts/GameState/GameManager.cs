@@ -17,7 +17,7 @@ namespace GameState
         
         private HashSet<StoryScene> CompletedStoryScenes = new HashSet<StoryScene>();
 
-        public AudioSource AudioSource;
+        private AudioSource AudioSource;
 
         public List<AudioClip> Sounds;
         

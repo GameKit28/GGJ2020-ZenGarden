@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using GameState;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using static PuzzlePiece.PuzzlePieceType;
@@ -116,6 +117,7 @@ public class PuzzleController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameManager.Instance.PlaySoundClip("enter_game");
         tiles = GetComponent<Tilemap>();
         mouseController = GetComponent<MouseController>();
         mouseController.onTileClicked = OnTileClicked;
@@ -145,6 +147,7 @@ public class PuzzleController : MonoBehaviour
             {
                 if (CheckNeighbors(position, toolPiece))
                 {
+                    GameManager.Instance.PlaySoundClip("dirt_pick_01");
                     PaintTile(position);
                     PropogateEffects(position, toolPiece);
                     return;
