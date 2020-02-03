@@ -41,16 +41,17 @@ public class LevelSelect : MonoBehaviour
 
     void updateBackground()
     {
-        int count = GameManager.Instance.GetScenesCompleted();
-        background.GetComponent<Image>().sprite = spriteArray[count];
+        int count = System.Math.Min(GameManager.Instance.LevelsDone-1, spriteArray.Length);
+        background.GetComponent<Image>().sprite = spriteArray[count-1];
     }
 
     void checkProgress()
     {
-        for(int i = 0; i < GameManager.Instance.GetScenesCompleted(); i++)
-        {
-            levelButtons[i+1].SetActive(true);
-        }
+        foreach (var button in levelButtons) button.SetActive(true);
+        //for(int i = 0; i < GameManager.Instance.LevelsDone - 1; i++)
+        //{
+        //    levelButtons[i].SetActive(true);
+        //}
     }
 
     public void PressLevel1()

@@ -27,4 +27,4 @@ MonoBehaviour:
     Emotion: 0
   Buttons:
   - ButtonText: What is Love?
-    Target: {fileID: 11400000, guid: 5c43eb25daa04f141bd2fc3d4550ba4b, type: 2}
+    Target: {fileID: 11400000, guid: 2f3ce83a516f67647bc7cf9e0411ccbc, type: 2}

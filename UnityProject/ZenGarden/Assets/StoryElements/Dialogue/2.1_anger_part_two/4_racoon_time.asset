@@ -24,4 +24,4 @@ MonoBehaviour:
     Emotion: 0
   Buttons:
   - ButtonText: Next
-    Target: {fileID: 11500000, guid: 779f8373d1fcbf64f8b56ec3a1da7824, type: 3}
+    Target: {fileID: 11400000, guid: 2f3ce83a516f67647bc7cf9e0411ccbc, type: 2}

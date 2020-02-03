@@ -117,6 +117,7 @@ public class PuzzleController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameManager.Instance.PlaySoundClip("enter_game");
         tiles = GetComponent<Tilemap>();
         mouseController = GetComponent<MouseController>();
         mouseController.onTileClicked = OnTileClicked;

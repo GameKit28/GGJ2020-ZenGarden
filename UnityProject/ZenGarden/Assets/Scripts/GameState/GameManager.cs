@@ -9,6 +9,9 @@ namespace GameState
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance { get; private set; }
+
+        public int StartAt = 0;
+        public int LevelsDone = 0;
         
         public List<StoryScene> StartingStoryScenes = new List<StoryScene>();
         
@@ -28,6 +31,10 @@ namespace GameState
             else
             {
                 GameObject.Destroy(this.gameObject);
+            }
+            for (int i = 0; i < StartAt; i++)
+            {
+                MarkSceneCompleted(StartingStoryScenes[i]);
             }
         }
 

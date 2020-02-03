@@ -34,6 +34,7 @@ public class InventoryController : MonoBehaviour
     public void EndLevel()
     {
         endLevelSplash.SetActive(true);
+        GameManager.Instance.LevelsDone++;
         Invoke("GoToNextScene", 3);
     }
 
