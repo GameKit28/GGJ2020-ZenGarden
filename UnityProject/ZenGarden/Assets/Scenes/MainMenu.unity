@@ -1158,7 +1158,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Zen Garden
+  m_text: Garden of Grief
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4f011a8776c302d4992f6621ce702c86, type: 2}
   m_sharedMaterial: {fileID: -5957146099240028882, guid: 4f011a8776c302d4992f6621ce702c86,
@@ -1226,13 +1226,13 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 5.796875, w: 0}
+  m_margin: {x: -192.67944, y: 0, z: 5.796875, w: 0}
   m_textInfo:
     textComponent: {fileID: 801782725}
-    characterCount: 10
+    characterCount: 15
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -2454,7 +2454,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 581.74994, y: 235.75002}
+  m_AnchoredPosition: {x: 914, y: 235.75002}
   m_SizeDelta: {x: 360.8, y: 132.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2089438524

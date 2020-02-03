@@ -2646,7 +2646,7 @@ PrefabInstance:
     - target: {fileID: 4635607088212647444, guid: fa9ff9f1dd6107c4c80db36167addf97,
         type: 3}
       propertyPath: LevelsDone
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6647171084889089879, guid: fa9ff9f1dd6107c4c80db36167addf97,
         type: 3}
