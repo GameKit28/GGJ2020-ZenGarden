@@ -11,6 +11,7 @@ namespace GameState
         public static GameManager Instance { get; private set; }
 
         public int StartAt = 0;
+        public int LevelsDone = 0;
         
         public List<StoryScene> StartingStoryScenes = new List<StoryScene>();
         
