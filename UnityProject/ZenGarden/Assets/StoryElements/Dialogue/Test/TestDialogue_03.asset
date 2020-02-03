@@ -15,12 +15,16 @@ MonoBehaviour:
   Dialogues:
   - Speaker: {fileID: 11400000, guid: d1289627be71eb84f802df3a41930b3e, type: 2}
     Dialogue: Testing.. Testing..
+    Emotion: 0
   - Speaker: {fileID: 11400000, guid: 715d2af1bcdddab45ae215a3818231bb, type: 2}
     Dialogue: One
+    Emotion: 0
   - Speaker: {fileID: 11400000, guid: d1289627be71eb84f802df3a41930b3e, type: 2}
     Dialogue: Two
+    Emotion: 0
   - Speaker: {fileID: 11400000, guid: 715d2af1bcdddab45ae215a3818231bb, type: 2}
     Dialogue: Three
+    Emotion: 0
   Buttons:
   - ButtonText: Baby Don't Hurt Me
-    Target: {fileID: 11400000, guid: fde2645e0aa3a4742aeb25878df8e432, type: 2}
+    Target: {fileID: 11400000, guid: 2f3ce83a516f67647bc7cf9e0411ccbc, type: 2}
