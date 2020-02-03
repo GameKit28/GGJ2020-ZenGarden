@@ -36,12 +36,13 @@ public class LevelSelect : MonoBehaviour
             levelButtons[i].SetActive(false);
         }
         levelButtons[0].SetActive(true);
+        updateBackground();
         checkProgress();
     }
 
     void updateBackground()
     {
-        int count = System.Math.Min(GameManager.Instance.LevelsDone-1, spriteArray.Length);
+        int count = System.Math.Min(GameManager.Instance.LevelsDone, spriteArray.Length);
         background.GetComponent<Image>().sprite = spriteArray[count-1];
     }
 
