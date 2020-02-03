@@ -35,6 +35,7 @@ public class InventoryController : MonoBehaviour
     {
         endLevelSplash.SetActive(true);
         GameManager.Instance.LevelsDone++;
+        //GameManager.Instance.PlaySoundClip("achievement_unlock"); //For some reason this is causing horrible crackling sounds
         Invoke("GoToNextScene", 3);
     }
 

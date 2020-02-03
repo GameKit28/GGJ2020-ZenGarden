@@ -25,6 +25,8 @@ namespace Story {
         public void HandleOptionClick(StoryOption option) {
             Debug.Log("I got the option click event! " + option.ButtonText);
 
+            GameManager.Instance.PlaySoundClip("2 UI CLICK 1");
+            
             //Let's just assume they clicked the first button for now
             ITransitionDestination target = option.GetTarget();
             if (target is StoryScene)
@@ -83,6 +85,8 @@ namespace Story {
             {
                 CharacterController.SetCharacters(LeftCharacter, RightCharacter);
             }
+            
+            GameManager.Instance.LoopMusic("background_music");
         }
 
         private void StartNewScene([NotNull] StoryScene scene)

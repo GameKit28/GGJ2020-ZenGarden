@@ -38,6 +38,8 @@ public class LevelSelect : MonoBehaviour
         levelButtons[0].SetActive(true);
         updateBackground();
         checkProgress();
+        
+        GameManager.Instance.PlaySoundClip("enter_game");
     }
 
     void updateBackground()

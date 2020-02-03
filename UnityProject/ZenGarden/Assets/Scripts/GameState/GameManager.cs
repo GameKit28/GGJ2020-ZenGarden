@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Story.Model;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
+using Random = System.Random;
 
 namespace GameState
 {
@@ -77,17 +79,41 @@ namespace GameState
             SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         }
 
-        public void PlaySoundClip(string name)
+        public void PlaySoundClip(params string[] clipNames)
         {
-            AudioClip clipToPlay = null;
+            List<AudioClip> candidateClips = GetAudioClipByName(clipNames);
+
+            if (candidateClips.Count > 0)
+            {
+                AudioSource.PlayOneShot(candidateClips[UnityEngine.Random.Range(0, candidateClips.Count)]);
+            }
+        }
+
+        public void LoopMusic(string clipName)
+        {
+            List<AudioClip> candidateClips = GetAudioClipByName(clipName);
+
+            if (candidateClips.Count > 0)
+            {
+                AudioSource.Stop();
+                AudioSource.clip = candidateClips[0];
+                AudioSource.Play();
+            }
+        }
+
+        private List<AudioClip> GetAudioClipByName(params string[] clipNames)
+        {
+            List<AudioClip> candidateClips = new List<AudioClip>();
+            //O(X*Y) Not the best, but this is a gamejam -Kit
             foreach (AudioClip clip in Sounds)
             {
-                if (clip.name == name)
+                foreach(string paramName in clipNames)
                 {
-                    clipToPlay = clip;
+                    if(clip.name == paramName) candidateClips.Add(clip);
                 }
             }
-            AudioSource.PlayOneShot(clipToPlay);
+
+            return candidateClips;
         }
     }
 }

@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 {
     public void Start()
     {
-        GameManager.Instance.PlaySoundClip("background_music");
+        GameManager.Instance.LoopMusic("ZenGarden");
     }
     
     public void PlayGame()

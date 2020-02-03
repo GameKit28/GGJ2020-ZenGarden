@@ -117,7 +117,7 @@ public class PuzzleController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.Instance.PlaySoundClip("enter_game");
+        GameManager.Instance.LoopMusic("ZenGarden");
         tiles = GetComponent<Tilemap>();
         mouseController = GetComponent<MouseController>();
         mouseController.onTileClicked = OnTileClicked;
@@ -147,7 +147,7 @@ public class PuzzleController : MonoBehaviour
             {
                 if (CheckNeighbors(position, toolPiece))
                 {
-                    GameManager.Instance.PlaySoundClip("dirt_pick_01");
+                    GameManager.Instance.PlaySoundClip("dirt_pick_01", "dirt_pick_02", "dirt_pick_04", "dirt_pick_05");
                     PaintTile(position);
                     PropogateEffects(position, toolPiece);
                     return;
@@ -155,10 +155,12 @@ public class PuzzleController : MonoBehaviour
               
             }
             Debug.Log("Can't plant there");
+            GameManager.Instance.PlaySoundClip("err_misclick");
         } 
         else
         {
             Debug.Log("No target piece");
+            GameManager.Instance.PlaySoundClip("err_misclick");
         }
     }
 
@@ -211,6 +213,14 @@ public class PuzzleController : MonoBehaviour
         {
             if (targetPuzzlePiece.IsAffectedBy(toolPiece))
             {
+                if (targetPuzzlePiece.Type == RACOON)
+                {
+                    GameManager.Instance.PlaySoundClip("racoon_01", "raccon_02", "racoon_03");
+                }
+                if (targetPuzzlePiece.Type == ROCK)
+                {
+                    GameManager.Instance.PlaySoundClip("foliage_01", "foliage_02", "foliage_03", "foliage_04");
+                }
                 PuzzlePiece.PuzzlePieceType newType = targetPuzzlePiece.NextTypeForDamage;
                 Debug.Log(String.Format("replacing {0} with {1}", targetPuzzlePiece.Type, newType));
                 tiles.SetTile(affectedPosition, tileForType[newType]);
