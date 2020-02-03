@@ -13,48 +13,42 @@ MonoBehaviour:
   m_Name: 3.1_whats_the_point
   m_EditorClassIdentifier: 
   Dialogues:
+  - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
+    Dialogue: Wow, two already? See, I told you you could do it.
+    Emotion: 0
   - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
-    Dialogue: How did my mom ever take care of all of these gardens herself?
+    Dialogue: Do what? What's the point?
     Emotion: 0
   - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
-    Dialogue: She didn't ignore them for months so it never got this bad.
-    Emotion: 1
-  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
-    Dialogue: Ouch.
-    Emotion: 0
-  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
-    Dialogue: There's just so much left to do.
-    Emotion: 0
-  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
-    Dialogue: There's still two gardens are there's so many weeds.
-    Emotion: 0
-  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
-    Dialogue: Maybe it's just too far gone.
+    Dialogue: You know, we're a lot like plants.
     Emotion: 0
   - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
-    Dialogue: Hey, stop that. The yard isn't too far gone and neither are you. We
-      can do this. YOU can do this.
-    Emotion: 1
-  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
-    Dialogue: I'm not even sure where to start with this one. It's such a mess. I'm
-      such a mess.
-    Emotion: 0
-  - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
-    Dialogue: Don't you see how far you've come, Jamie?
-    Emotion: 0
-  - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
-    Dialogue: You already fixed up three of the gardens.
-    Emotion: 0
-  - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
-    Dialogue: You've gotten rid of racoons and weeds and you've brought back the
-      flowers your mom loved so much.
-    Emotion: 0
-  - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
-    Dialogue: I believe in you, your mom believes in you, now you have to believe
-      in you.
+    Dialogue: ' We need time to grow. Things get in the way.'
     Emotion: 0
   - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
-    Dialogue: I guess...
+    Dialogue: We eventually die.
+    Emotion: 0
+  - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
+    Dialogue: I know you miss her, Jamie. But I think she's proud of you, wherever
+      she is.
+    Emotion: 2
+  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
+    Dialogue: You know this was her yard. These were her gardens. Should I even be
+      doing this? Shouldn't I just let her rest in peace or something?
+    Emotion: 0
+  - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
+    Dialogue: You're not disrupting her spirit by caring for her gardens. You know
+      how much she loved them, she'd be glad you're doing something about those weeds
+      and racoons.
+    Emotion: 0
+  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
+    Dialogue: I look at the plants and I see her. It doesn't feel right.
+    Emotion: 0
+  - Speaker: {fileID: 11400000, guid: 4a64f900078d62a43890c8a2fc59c26c, type: 2}
+    Dialogue: If she was here, what do you do think she'd want to do?
+    Emotion: 0
+  - Speaker: {fileID: 11400000, guid: f67193be01077dd4b826eef1c3aea3dc, type: 2}
+    Dialogue: Sing to the flowers, probably.
     Emotion: 0
   Buttons:
   - ButtonText: Next
