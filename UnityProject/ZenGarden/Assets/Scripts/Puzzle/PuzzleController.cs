@@ -11,6 +11,7 @@ public class PuzzleController : MonoBehaviour
     static Dictionary<string, PuzzlePiece> puzzlePieceMap = new Dictionary<string, PuzzlePiece>()
     {
         { "dirt", new PuzzlePiece() { Type = PuzzlePiece.PuzzlePieceType.GROUND}},
+        { "signpost", new PuzzlePiece() { Type = PuzzlePiece.PuzzlePieceType.SIGNPOST}},
         { "dirt_with_rocks", new PuzzlePiece() { Type = PuzzlePiece.PuzzlePieceType.ROCKY_GROUND}},
         { "weeds", new PuzzlePiece() { Type = PuzzlePiece.PuzzlePieceType.WEED }},
         { "rock", new PuzzlePiece() {

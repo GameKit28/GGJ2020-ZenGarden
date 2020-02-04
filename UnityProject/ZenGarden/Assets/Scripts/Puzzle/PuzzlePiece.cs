@@ -17,6 +17,7 @@ public class PuzzlePiece
         ROCKY_GROUND,
         RACOON,
         ROSE_BUSH,
+        SIGNPOST,
     }
 
     public PuzzlePieceType Type { get; set; }
