@@ -17,5 +17,5 @@ MonoBehaviour:
     Dialogue: I'm okay, I guess. I feel lost, though.
     Emotion: 0
   Buttons:
-  - ButtonText: 
+  - ButtonText: Next
     Target: {fileID: 11400000, guid: 386537da28f38e3468cc262c62f94eaf, type: 2}

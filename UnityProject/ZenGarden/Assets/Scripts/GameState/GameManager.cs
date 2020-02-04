@@ -115,5 +115,10 @@ namespace GameState
 
             return candidateClips;
         }
+
+        internal void StartLevelSelect()
+        {
+            SceneManager.LoadScene("LevelSelect", LoadSceneMode.Single);
+        }
     }
 }

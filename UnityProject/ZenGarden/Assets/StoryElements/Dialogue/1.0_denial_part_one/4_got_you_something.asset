@@ -34,4 +34,4 @@ MonoBehaviour:
   - ButtonText: Of course
     Target: {fileID: 11400000, guid: e5bd05a5b67b98342a9c73c46e090dab, type: 2}
   - ButtonText: I don't know
-    Target: {fileID: 0}
+    Target: {fileID: 11400000, guid: 55b943e31c435614bb1bc17bad686455, type: 2}

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Setting: {fileID: 11400000, guid: 9cc57825fa92b224db896be916bab8f2, type: 2}
   StartingDialogue: {fileID: 11400000, guid: c07de34a0b4725943a3faa9329c7a704, type: 2}
+  ShowRightCharacter: 1

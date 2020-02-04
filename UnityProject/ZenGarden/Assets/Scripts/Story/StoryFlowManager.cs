@@ -79,32 +79,47 @@ namespace Story {
             }
 
             StoryScene firstScene = StartingSceneOverride ? StartingSceneOverride : GameManager.Instance.GetNextScene();
-            StartNewScene(firstScene);
-
-            if (CharacterController)
+            if (firstScene != null)
             {
-                CharacterController.SetCharacters(LeftCharacter, RightCharacter);
-            }
-            
-            GameManager.Instance.LoopMusic("background_music");
+                StartNewScene(firstScene);
+
+                if (CharacterController)
+                {
+                    CharacterController.SetCharacters(LeftCharacter, RightCharacter);
+                }
+
+                GameManager.Instance.LoopMusic("background_music");
+            } else
+            {
+                GameManager.Instance.StartLevelSelect();
+            }        
         }
 
         private void StartNewScene([NotNull] StoryScene scene)
         {
             Debug.Log("Starting Scene: " + scene);
             GameManager.Instance.MarkSceneCompleted(scene);
-            
-            if (CharacterController)
-            {
-                CharacterController.DoOutro(DialogCharacterController.Character.Both);
-            }
-            
-            StartNewSequence(scene.StartingDialogue);
 
             if (Background)
             {
                 Background.SetBackground(scene.Setting);
             }
+
+            if (CharacterController)
+            {
+                if (scene.ShowRightCharacter)
+                {
+                    CharacterController.DoIntro(DialogCharacterController.Character.Right);
+                }
+                else
+                {
+                    CharacterController.DoOutro(DialogCharacterController.Character.Right);
+                }
+            }
+            
+            StartNewSequence(scene.StartingDialogue);
+
+            
         }
         
         private void StartNewSequence([NotNull] StoryDialogueSequence sequence)
@@ -114,19 +129,6 @@ namespace Story {
             currentDialogueSequenceIndex = 0;
 
             StoryDialogue dialogue = currentDialogueSequence.Dialogues[(int) currentDialogueSequenceIndex];
-
-            if (CharacterController)
-            {
-                if (dialogue.Speaker == LeftCharacter)
-                {
-                    CharacterController.DoIntro(DialogCharacterController.Character.Left);
-                }
-
-                if (dialogue.Speaker == RightCharacter)
-                {
-                    CharacterController.DoIntro(DialogCharacterController.Character.Right);
-                }
-            }
             
             if (DialogueBox)
             {
@@ -149,7 +151,7 @@ namespace Story {
             
             StoryDialogue dialogue = currentDialogueSequence.Dialogues[(int) currentDialogueSequenceIndex];
             CharacterController.SetCharacterEmotion(dialogue.Speaker, dialogue.Emotion);
-            DialogueBox.SetDialogue(dialogue);
+            DialogueBox.SetDialogue(dialogue.Speaker == RightCharacter ? DialogCharacterController.Character.Right : DialogCharacterController.Character.Left, dialogue);
         }
     }
 }

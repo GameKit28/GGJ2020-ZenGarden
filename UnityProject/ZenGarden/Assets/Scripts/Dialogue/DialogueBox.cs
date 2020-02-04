@@ -9,7 +9,10 @@ namespace Dialogue
 {
     public class DialogueBox : MonoBehaviour
     {
-        public Text NameText;
+        public GameObject LeftSpeakerPanel;
+        public GameObject RightSpeakerPanel;
+        public Text LeftNameText;
+        public Text RightNameText;
         public Text DialogueText;
 
         public GameObject NextButtonPanel;
@@ -27,7 +30,7 @@ namespace Dialogue
         // Start is called before the first frame update
         void Awake()
         {
-            SetDialogue(DefaultDialogue);
+            SetDialogue(DialogCharacterController.Character.Left, DefaultDialogue);
         }
 
         public void ClickNextEvent() {
@@ -55,8 +58,20 @@ namespace Dialogue
             OptionClickListeners.Add(self);
         }
 
-        public void SetDialogue(StoryDialogue dialogue) {
-            NameText.text = dialogue.Speaker.Name;
+        public void SetDialogue(DialogCharacterController.Character character, StoryDialogue dialogue) {
+            LeftSpeakerPanel.gameObject.SetActive(false);
+            RightSpeakerPanel.gameObject.SetActive(false);
+            if (character == DialogCharacterController.Character.Left)
+            {
+                LeftSpeakerPanel.gameObject.SetActive(true);
+                LeftNameText.text = dialogue.Speaker.Name;
+            }
+            else if (character == DialogCharacterController.Character.Right)
+            {
+                RightSpeakerPanel.gameObject.SetActive(true);
+                RightNameText.text = dialogue.Speaker.Name;
+            }
+
             DialogueText.text = dialogue.Dialogue;
         }
 

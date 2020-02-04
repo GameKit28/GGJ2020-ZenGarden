@@ -36,5 +36,5 @@ MonoBehaviour:
   Buttons:
   - ButtonText: What if I trip?
     Target: {fileID: 11400000, guid: a5c2735d85adcc44585e762dabb8e76f, type: 2}
-  - ButtonText: Next
+  - ButtonText: I guess
     Target: {fileID: 11400000, guid: fc61889ec40e0344f9833a71802aa687, type: 2}

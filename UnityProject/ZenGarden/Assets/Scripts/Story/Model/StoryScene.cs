@@ -10,5 +10,6 @@ namespace Story.Model {
     {
         public StorySetting Setting;
         public StoryDialogueSequence StartingDialogue;
+        public bool ShowRightCharacter;
     }
 }
