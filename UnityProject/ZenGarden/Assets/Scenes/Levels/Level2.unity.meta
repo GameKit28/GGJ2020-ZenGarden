@@ -1,5 +1,10 @@
 fileFormatVersion: 2
-guid: a8433a42fdcb65d4990abe952ee35771
+<<<<<<< HEAD:UnityProject/ZenGarden/Assets/Scenes/Levels/Level3.unity.meta
+guid: 6ea5a469846e5454f9aaf6494a792209
+=======
+guid: 2e8adb415434eff49b687eae2ca558d6
+folderAsset: yes
+>>>>>>> ae0fb16cf12be4828f704c229efd0877db0e961f:UnityProject/ZenGarden/Assets/Materials/Sprite-Grayscale.shader.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

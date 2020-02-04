@@ -10,12 +10,7 @@ public class LevelSelect : MonoBehaviour
     //public GameObject manager;
     public GameObject[] levelButtons;
     GameObject background;
-    public Sprite bg1;
-    public Sprite bg2;
-    public Sprite bg3;
-    public Sprite bg4;
-    public Sprite bg5;
-    public Sprite bg6;
+   
     public Sprite[] spriteArray;
 
     private void Start()
@@ -24,13 +19,7 @@ public class LevelSelect : MonoBehaviour
         GameManager.Instance.GetScenesCompleted();
         levelButtons = GameObject.FindGameObjectsWithTag("LevelButton");
         background = GameObject.FindGameObjectWithTag("BackgroundImage");
-        spriteArray = new Sprite[6];
-        spriteArray[0] = bg1;
-        spriteArray[1] = bg2;
-        spriteArray[2] = bg3;
-        spriteArray[3] = bg4;
-        spriteArray[4] = bg5;
-        spriteArray[5] = bg6;
+        
         for (int i = 0; i < levelButtons.Length; i++)
         {
             levelButtons[i].SetActive(false);
@@ -44,17 +33,17 @@ public class LevelSelect : MonoBehaviour
 
     void updateBackground()
     {
-        int count = System.Math.Min(GameManager.Instance.LevelsDone, spriteArray.Length);
+        int count = System.Math.Max(1, System.Math.Min(GameManager.Instance.LevelsDone, spriteArray.Length));
         background.GetComponent<Image>().sprite = spriteArray[count-1];
     }
 
     void checkProgress()
     {
-        foreach (var button in levelButtons) button.SetActive(true);
-        //for(int i = 0; i < GameManager.Instance.LevelsDone - 1; i++)
-        //{
-        //    levelButtons[i].SetActive(true);
-        //}
+        var activateCount = System.Math.Min(GameManager.Instance.LevelsDone, levelButtons.Length);
+        for (int i = 0; i < activateCount; i++)
+        {
+            levelButtons[i].SetActive(true);
+        }
     }
 
     public void PressLevel1()

@@ -14,6 +14,7 @@ namespace Dialogue
 
         public GameObject NextButtonPanel;
         public GameObject DynamicButtonPanel;
+        public GameObject SingleOptionButtonPanel;
 
         public GameObject DynamicButtonPrefab;
 
@@ -66,24 +67,38 @@ namespace Dialogue
                 //Enable Just the Next Button
                 NextButtonPanel.SetActive(true);
                 DynamicButtonPanel.SetActive(false);
+                SingleOptionButtonPanel.SetActive(false);
             }
             else
             {
                 NextButtonPanel.SetActive(false);
-                DynamicButtonPanel.SetActive(true);
-                
+                DynamicButtonPanel.SetActive(false);
+                SingleOptionButtonPanel.SetActive(false);
+
                 //Delete all children
                 foreach (Transform child in DynamicButtonPanel.transform)
                 {
                     GameObject.Destroy(child.gameObject);
                 }
                 
-                //Create new children
-                foreach (StoryOption sOption in options)
+                if (options.Count > 1)
                 {
-                    GameObject newButton = GameObject.Instantiate(DynamicButtonPrefab, DynamicButtonPanel.transform);
-                    newButton.GetComponentInChildren<Text>().text = sOption.ButtonText;
-                    newButton.GetComponent<Button>().onClick.AddListener(() => {ClickOptionEvent(sOption);});
+                    DynamicButtonPanel.SetActive(true);
+                    //Create new children
+                    foreach (StoryOption sOption in options)
+                    {
+                        GameObject newButton = GameObject.Instantiate(DynamicButtonPrefab, DynamicButtonPanel.transform);
+                        newButton.GetComponentInChildren<Text>().text = sOption.ButtonText;
+                        newButton.GetComponent<Button>().onClick.AddListener(() => { ClickOptionEvent(sOption); });
+                    }
+
+                }
+                else
+                {
+                    SingleOptionButtonPanel.SetActive(true);
+                    SingleOptionButtonPanel.GetComponentInChildren<Text>().text = options[0].ButtonText;
+                    SingleOptionButtonPanel.GetComponentInChildren<Button>().onClick.RemoveAllListeners();
+                    SingleOptionButtonPanel.GetComponentInChildren<Button>().onClick.AddListener(() => { ClickOptionEvent(options[0]); });
                 }
             }
         }

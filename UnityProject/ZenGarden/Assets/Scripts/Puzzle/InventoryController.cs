@@ -10,6 +10,7 @@ public class InventoryController : MonoBehaviour
     Tool[] tools;
     private GameObject endLevelSplash;
     public bool goToNextScene = true;
+    private bool levelComplete = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +25,9 @@ public class InventoryController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Array.TrueForAll(tools, tool => !tool.gameObject.activeInHierarchy || tool.count==0))
+        if (!levelComplete && Array.TrueForAll(tools, tool => !tool.gameObject.activeInHierarchy || tool.count==0))
         {
+            levelComplete = true;
             EndLevel();
         }
         

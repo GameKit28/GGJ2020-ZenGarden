@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 223761576}
   - component: {fileID: 223761575}
   m_Layer: 5
-  m_Name: Level3Button
+  m_Name: Level4Button
   m_TagString: LevelButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 356374662}
   - component: {fileID: 356374661}
   m_Layer: 5
-  m_Name: Level4Button
+  m_Name: Level3Button
   m_TagString: LevelButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -877,7 +877,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 3
+  m_text: Level 4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4f011a8776c302d4992f6621ce702c86, type: 2}
   m_sharedMaterial: {fileID: -5957146099240028882, guid: 4f011a8776c302d4992f6621ce702c86,
@@ -1034,7 +1034,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 4
+  m_text: Level 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4f011a8776c302d4992f6621ce702c86, type: 2}
   m_sharedMaterial: {fileID: -5957146099240028882, guid: 4f011a8776c302d4992f6621ce702c86,
@@ -1361,13 +1361,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelButtons: []
-  bg1: {fileID: 21300000, guid: 8ca8fa64125b58847a12f9a1165c48bf, type: 3}
-  bg2: {fileID: 21300000, guid: 707d961d8e40eac44ae8502d7b53aa1c, type: 3}
-  bg3: {fileID: 21300000, guid: bb108fe9cae776d4db1a29bd4c1b3c5a, type: 3}
-  bg4: {fileID: 21300000, guid: 917726123a35a21449fea6d0f4e86a9f, type: 3}
-  bg5: {fileID: 21300000, guid: bdb755ed08198714287bb49f9505acbc, type: 3}
-  bg6: {fileID: 21300000, guid: 1657bfee907b5e04ab3a3894ae109024, type: 3}
-  spriteArray: []
+  spriteArray:
+  - {fileID: 21300000, guid: 8ca8fa64125b58847a12f9a1165c48bf, type: 3}
+  - {fileID: 21300000, guid: 707d961d8e40eac44ae8502d7b53aa1c, type: 3}
+  - {fileID: 21300000, guid: bb108fe9cae776d4db1a29bd4c1b3c5a, type: 3}
+  - {fileID: 21300000, guid: 917726123a35a21449fea6d0f4e86a9f, type: 3}
+  - {fileID: 21300000, guid: bdb755ed08198714287bb49f9505acbc, type: 3}
+  - {fileID: 21300000, guid: 1657bfee907b5e04ab3a3894ae109024, type: 3}
 --- !u!1 &1035916163
 GameObject:
   m_ObjectHideFlags: 0
@@ -2646,7 +2646,7 @@ PrefabInstance:
     - target: {fileID: 4635607088212647444, guid: fa9ff9f1dd6107c4c80db36167addf97,
         type: 3}
       propertyPath: LevelsDone
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6647171084889089879, guid: fa9ff9f1dd6107c4c80db36167addf97,
         type: 3}
