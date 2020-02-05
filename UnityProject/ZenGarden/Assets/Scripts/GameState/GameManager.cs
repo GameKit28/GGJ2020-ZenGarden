@@ -13,7 +13,9 @@ namespace GameState
         public static GameManager Instance { get; private set; }
 
         public int StartAt = 0;
-        public int LevelsDone = 0;
+        public bool SkipStories = false;
+        public HashSet<string> LevelsDone = new HashSet<string>();
+        public string[] MarkLevelsAsDone;
         
         public List<StoryScene> StartingStoryScenes = new List<StoryScene>();
         
@@ -38,6 +40,10 @@ namespace GameState
             {
                 MarkSceneCompleted(StartingStoryScenes[i]);
             }
+            foreach (var sceneName in MarkLevelsAsDone)
+            {
+                LevelsDone.Add(sceneName);
+            }
         }
 
         private void Start()
@@ -47,6 +53,8 @@ namespace GameState
 
         public StoryScene GetNextScene()
         {
+            if (SkipStories) return null;
+
             foreach (StoryScene scene in StartingStoryScenes)
             {
                 if (!CompletedStoryScenes.Contains(scene))
@@ -61,6 +69,16 @@ namespace GameState
         public void MarkSceneCompleted(StoryScene scene)
         {
             CompletedStoryScenes.Add(scene);
+        }
+
+        public void MarkCurrentLevelCompleted()
+        {
+            LevelsDone.Add(SceneManager.GetActiveScene().name);
+        }
+
+        public bool IsCurrentLevelCompleted()
+        {
+            return LevelsDone.Contains(SceneManager.GetActiveScene().name);
         }
 
         public bool HasCompletedAnyScenes()

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2837975639561536887}
   - component: {fileID: 2837975639561536888}
   - component: {fileID: 2837975639561536889}
-  - component: {fileID: 717450066575478837}
+  - component: {fileID: 7921167753346587094}
   m_Layer: 5
-  m_Name: ResetButton
+  m_Name: ExitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300034, guid: c079b2d770ce9094283a134eef218056, type: 3}
+  m_Sprite: {fileID: 21300010, guid: c079b2d770ce9094283a134eef218056, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 717450066575478837}
+      - m_Target: {fileID: 7921167753346587094}
         m_MethodName: OnButtonClick
         m_Mode: 1
         m_Arguments:
@@ -129,7 +129,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &717450066575478837
+--- !u!114 &7921167753346587094
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,6 +138,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2837975639561536891}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 107d9a935977653498bffb1749a476db, type: 3}
+  m_Script: {fileID: 11500000, guid: d02f2e9e464d4e24ca71c91e6379e169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -202,13 +202,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa9ff9f1dd6107c4c80db36167addf97, type: 3}
+--- !u!1 &621583782 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2295453940103483520, guid: 2aa9396d100909e4c87f395084823aea,
+    type: 3}
+  m_PrefabInstance: {fileID: 2295453938848635663}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &621583783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621583782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
 --- !u!114 &874017657 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2295453940103483549, guid: 2aa9396d100909e4c87f395084823aea,
     type: 3}
   m_PrefabInstance: {fileID: 2295453938848635663}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 621583782}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 082fa49c574551f458023d7d3e85487b, type: 3}
@@ -598,6 +626,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684457584500071931, guid: 82ff972fb19527541975ca86075cf964,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684457584500071931, guid: 82ff972fb19527541975ca86075cf964,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684457584500071931, guid: 82ff972fb19527541975ca86075cf964,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82ff972fb19527541975ca86075cf964, type: 3}

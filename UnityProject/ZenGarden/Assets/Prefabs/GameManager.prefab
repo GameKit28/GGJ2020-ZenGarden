@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartAt: 0
-  LevelsDone: 0
+  SkipStories: 0
+  MarkLevelsAsDone: []
   StartingStoryScenes:
   - {fileID: 11400000, guid: 49eae0052ed36e54ab81af28f802c6f1, type: 2}
   - {fileID: 11400000, guid: 8e24e342a380ad344bc2c4b7803f058b, type: 2}

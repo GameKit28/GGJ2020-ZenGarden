@@ -9,17 +9,12 @@ public class LevelSelect : MonoBehaviour
 {
     //public GameObject manager;
     public GameObject[] levelButtons;
-    GameObject background;
+    public GameObject background;
    
     public Sprite[] spriteArray;
 
     private void Start()
     {
-        //manager = GameObject.Find("GameManager");
-        GameManager.Instance.GetScenesCompleted();
-        levelButtons = GameObject.FindGameObjectsWithTag("LevelButton");
-        background = GameObject.FindGameObjectWithTag("BackgroundImage");
-        
         for (int i = 0; i < levelButtons.Length; i++)
         {
             levelButtons[i].SetActive(false);
@@ -33,13 +28,13 @@ public class LevelSelect : MonoBehaviour
 
     void updateBackground()
     {
-        int count = System.Math.Max(1, System.Math.Min(GameManager.Instance.LevelsDone, spriteArray.Length));
+        int count = System.Math.Max(1, System.Math.Min(GameManager.Instance.LevelsDone.Count, spriteArray.Length));
         background.GetComponent<Image>().sprite = spriteArray[count-1];
     }
 
     void checkProgress()
     {
-        var activateCount = System.Math.Min(GameManager.Instance.LevelsDone, levelButtons.Length);
+        var activateCount = System.Math.Min(GameManager.Instance.LevelsDone.Count, levelButtons.Length);
         for (int i = 0; i < activateCount; i++)
         {
             levelButtons[i].SetActive(true);

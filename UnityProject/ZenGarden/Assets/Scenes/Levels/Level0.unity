@@ -256,7 +256,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 50b1b3d718a8b81499f2875b28c3c761, type: 2}
+  - {fileID: 2100000, guid: fc767ca1bfd75314f94321c565733702, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1221,17 +1221,22 @@ PrefabInstance:
     - target: {fileID: 2306469462794268854, guid: a024518c82ed52e4886c7ebd2f738dfd,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 7.325
+      value: 4.3068714
       objectReference: {fileID: 0}
     - target: {fileID: 2306469462794268854, guid: a024518c82ed52e4886c7ebd2f738dfd,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.225
+      value: 5.135625
       objectReference: {fileID: 0}
     - target: {fileID: 2306469463090129506, guid: a024518c82ed52e4886c7ebd2f738dfd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2306469463090129506, guid: a024518c82ed52e4886c7ebd2f738dfd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -28
       objectReference: {fileID: 0}
     - target: {fileID: 2306469463090129518, guid: a024518c82ed52e4886c7ebd2f738dfd,
         type: 3}
@@ -1305,10 +1310,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
