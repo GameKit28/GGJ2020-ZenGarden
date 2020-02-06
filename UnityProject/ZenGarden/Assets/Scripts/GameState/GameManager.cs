@@ -36,6 +36,7 @@ namespace GameState
             {
                 GameObject.Destroy(this.gameObject);
             }
+            AudioSource = GetComponent<AudioSource>();
             for (int i = 0; i < StartAt; i++)
             {
                 MarkSceneCompleted(StartingStoryScenes[i]);
@@ -48,7 +49,6 @@ namespace GameState
 
         private void Start()
         {
-            AudioSource = GetComponent<AudioSource>();
         }
 
         public StoryScene GetNextScene()
