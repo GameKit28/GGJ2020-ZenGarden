@@ -6,7 +6,7 @@ public class Quit : MonoBehaviour
 {
     public void Awake()
     {
-#if UNITY_WEBPLAYER
+#if UNITY_WEBGL
         gameObject.SetActive(false);             
 #endif
     }
