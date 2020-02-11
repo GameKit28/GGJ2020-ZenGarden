@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using GameState;
 
-public class Reset : MonoBehaviour
+public class Exit : MonoBehaviour
 {
     public void OnButtonClick()
     {
-         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameManager.Instance.LoadNewUnityScene("LevelSelect");
     }
 }
